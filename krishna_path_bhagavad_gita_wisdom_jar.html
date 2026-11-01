@@ -36,6 +36,9 @@
             moodPeace: '#e88ba5',
             moodLoneliness: '#7e57c2',
             moodAnxious: '#795548',
+            moodLust: '#991b1b',
+            moodProcrastination: '#c25e00',
+            moodOverthinking: '#2e3a8c',
           }
         }
       }
@@ -351,7 +354,7 @@
             </p>
 
             <!-- Mini Color Grid / Guide on the label (Just like the real product) -->
-            <div class="grid grid-cols-4 gap-x-2 gap-y-1.5 w-full mt-2.5 pt-2 border-t border-stone-300/80 text-[8.5px] font-medium text-stone-700">
+            <div class="grid grid-cols-4 gap-x-1.5 gap-y-1 w-full mt-2 pt-1.5 border-t border-stone-300/80 text-[7.5px] sm:text-[8px] font-medium text-stone-700">
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodHappy mb-0.5"></span>
                 <span>Happy</span>
@@ -383,6 +386,18 @@
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodAnxious mb-0.5"></span>
                 <span>Anxious</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodLust mb-0.5"></span>
+                <span>Lust</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodProcrastination mb-0.5"></span>
+                <span>Delay</span>
+              </div>
+              <div class="flex flex-col items-center col-span-2">
+                <span class="w-full h-1.5 rounded-full bg-moodOverthinking mb-0.5"></span>
+                <span>Overthinking</span>
               </div>
             </div>
 
@@ -490,6 +505,33 @@
           <div>
             <div class="text-xs font-bold text-stone-300">Anxious</div>
             <div class="text-[10px] text-slate-400">Surrender • BG 2.47</div>
+          </div>
+        </button>
+
+        <!-- Lust / Kaam Vasna -->
+        <button data-emotion="lust" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-red-950 hover:border-rose-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodLust shadow-md shadow-red-950 group-hover:ring-2 ring-rose-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-rose-300">Lust (काम वासना)</div>
+            <div class="text-[10px] text-slate-400">Mastery • BG 3.37</div>
+          </div>
+        </button>
+
+        <!-- Procrastination -->
+        <button data-emotion="procrastination" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-orange-950 hover:border-orange-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodProcrastination shadow-md shadow-orange-950 group-hover:ring-2 ring-orange-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-amber-300">Procrastination</div>
+            <div class="text-[10px] text-slate-400">Action Now • BG 18.28</div>
+          </div>
+        </button>
+
+        <!-- Overthinking -->
+        <button data-emotion="overthinking" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-indigo-950 hover:border-indigo-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodOverthinking shadow-md shadow-indigo-950 group-hover:ring-2 ring-indigo-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-indigo-300">Overthinking</div>
+            <div class="text-[10px] text-slate-400">Still Mind • BG 6.34-35</div>
           </div>
         </button>
 
@@ -1030,6 +1072,105 @@
           hindi: 'यदि तुम अपना चित्त मुझमें लगाओगे, तो मेरी कृपा से समस्त दुर्गम संकटों को पार कर जाओगे।',
           practical: 'When challenges seem too colossal for your strength, remind yourself that you do not need to solve everything alone. Lean on grace.'
         }
+      ],
+
+      lust: [
+        {
+          id: 'lust-1',
+          emotion: 'lust',
+          ref: 'BG 3.37',
+          sanskrit: 'काम एष क्रोध एष रजोगुणसमुद्भवः।\nमहाशनो महापाप्मा विद्ध्येनमिह वैरिणम्॥',
+          translit: 'kāma eṣa krodha eṣa rajo-guṇa-samudbhavaḥ |\nmahāśano mahā-pāpmā viddhy enam iha vairiṇam ||',
+          english: 'It is lust only, born of the mode of passion, which later turns into wrath. It is the all-devouring, greatly sinful enemy of the world; know it as your foe.',
+          hindi: 'यह काम (वासना) ही है, जो रजोगुण से उत्पन्न होता है और बाद में क्रोध में बदल जाता है। यह कभी तृप्त न होने वाला और महा-पापी है; इसे ही इस संसार में अपना सबसे बड़ा शत्रु जानो।',
+          practical: 'Lust is an insatiable fire—feeding it never quenches it. Observe the surge without identification or guilt, and redirect that raw vital energy into creative work, physical exertion, or chanting.'
+        },
+        {
+          id: 'lust-2',
+          emotion: 'lust',
+          ref: 'BG 3.41',
+          sanskrit: 'तस्मात्त्वमिन्द्रियाण्यादौ नियम्य भरतर्षभ।\nपाप्मानं प्रजहि ह्येनं ज्ञानविज्ञाननाशनम्॥',
+          translit: 'tasmāt tvam indriyāṇy ādau niyamya bharatarṣabha |\npāpmānaṁ prajahi hy enaṁ jñāna-vijñāna-nāśanam ||',
+          english: 'Therefore, O best of the Bharatas, by restraining your senses from the very beginning, conquer this sinful destroyer of wisdom and self-realization.',
+          hindi: 'इसलिए हे भरतश्रेष्ठ! तुम सबसे पहले अपनी इंद्रियों को वश में करके, ज्ञान और आत्म-साक्षात्कार का नाश करने वाले इस महान पापी (काम-वासना) का समूल विनाश करो।',
+          practical: 'Master your entry gates. Protect what your eyes consume and your fingers tap in vulnerable moments before the seed of obsession gains momentum.'
+        },
+        {
+          id: 'lust-3',
+          emotion: 'lust',
+          ref: 'BG 3.43',
+          sanskrit: 'एवं बुद्धेः परं बुद्ध्वा संस्तभ्यात्मानमात्मना।\nजहि शत्रुं महाबाहो कामरूपं दुरासदम्॥',
+          translit: 'evaṁ buddheḥ paraṁ buddhvā saṁstabhyātmānam ātmanā |\njahi śatruṁ mahā-bāho kāma-rūpaṁ durāsadam ||',
+          english: 'Thus knowing the soul to be superior to the intellect, steady the lower self through the higher Self, and slay this formidable enemy known as lust.',
+          hindi: 'इस प्रकार आत्मा को बुद्धि से भी श्रेष्ठ जानकर, अपने मन को आत्मज्ञान द्वारा स्थिर करो और हे महाबाहो! काम-वासना रूपी इस दुर्जय शत्रु को मार डालो।',
+          practical: 'You are not your cravings; you are the eternal conscious witness above them. When urges rise, step back into your higher observer self and watch the impulse pass.'
+        }
+      ],
+
+      procrastination: [
+        {
+          id: 'procrastination-1',
+          emotion: 'procrastination',
+          ref: 'BG 18.28',
+          sanskrit: 'अयुक्तः प्राकृतः स्तब्धः शठो नैष्कृतिकोऽलसः।\nविषादी दीर्घसूत्री च कर्ता तामस उच्यते॥',
+          translit: 'ayuktaḥ prākṛtaḥ stabdhaḥ śaṭho naiṣkṛtiko \'lasaḥ |\nviṣādī dīrgha-sūtrī ca kartā tāmasa ucyate ||',
+          english: 'A worker who is undisciplined, vulgar, stubborn, deceitful, lazy, perpetually despondent, and procrastinating (dīrghasūtrī) is said to be in the mode of ignorance.',
+          hindi: 'जो कर्ता अशास्त्रीय, घमंडी, हठी, कपटी, आलसी, विषादग्रस्त और सदा काम को टालने वाला (दीर्घसूत्री) है, वह तामसिक कहलाता है।',
+          practical: 'Krishna explicitly warns against "dīrgha-sūtrī" (habitual delaying). Procrastination is the inertia of Tamas. Count 5-4-3-2-1 and take immediate physical action on the single easiest step.'
+        },
+        {
+          id: 'procrastination-2',
+          emotion: 'procrastination',
+          ref: 'BG 3.4',
+          sanskrit: 'न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते।\nन च संन्यसनादेव सिद्धिं समधिगच्छति॥',
+          translit: 'na karmaṇām anārambhān naiṣkarmyaṁ puruṣo \'śnute |\nna ca sannyasanād eva siddhiṁ samadhigacchati ||',
+          english: 'Not by abstaining from work does one achieve freedom from action, nor by mere renunciation of effort does one attain supreme perfection.',
+          hindi: 'न तो कर्मों का आरंभ न करने से मनुष्य कर्म-बंधन से मुक्ति पाता है, और न केवल कर्मों के त्याग देने से सिद्धि प्राप्त होती है।',
+          practical: 'Postponing challenging tasks never preserves peace; it only amplifies background dread. Real lightness arrives from finishing what must be done.'
+        },
+        {
+          id: 'procrastination-3',
+          emotion: 'procrastination',
+          ref: 'BG 2.38',
+          sanskrit: 'सुखदुःखे समे कृत्वा लाभालाभौ जयाजयौ।\nततो युद्धाय युज्यस्व नैवं पापमवाप्स्यसि॥',
+          translit: 'sukha-duḥkhe same kṛtvā lābhālābhau jayājayau |\ntato yuddhāya yujyasva naivaṁ pāpam avāpsyasi ||',
+          english: 'Treating pleasure and pain, gain and loss, victory and defeat alike, engage in the battle of your duties. Thus you shall incur no fault.',
+          hindi: 'सुख-दुःख, लाभ-हानि और जय-पराजय को समान समझकर अपने कर्तव्य-कर्म के लिए तत्पर हो जाओ; ऐसा करने से तुम्हें कोई दोष नहीं लगेगा।',
+          practical: 'Procrastination is often perfectionism in disguise. Neutralize your fear of failing: results belong to the cosmic order, but earnest effort belongs to you right now.'
+        }
+      ],
+
+      overthinking: [
+        {
+          id: 'overthinking-1',
+          emotion: 'overthinking',
+          ref: 'BG 6.34-35',
+          sanskrit: 'चञ्चलं हि मनः कृष्ण प्रमाथि बलवद्दृढम्...\nअभ्यासेन तु कौन्तेय वैराग्येण च गृह्यते॥',
+          translit: 'cañcalaṁ hi manaḥ kṛṣṇa pramāthi balavad dṛḍham...\nabhyāsena tu kaunteya vairāgyeṇa ca gṛhyate ||',
+          english: 'Arjuna says: The mind is restless, turbulent, strong and obstinate, O Krishna. The Lord replies: Without doubt the mind is fickle; yet through steady practice (Abhyasa) and detachment (Vairagya), it is brought under control.',
+          hindi: 'अर्जुन बोले: हे कृष्ण! मन बड़ा चंचल और प्रचंड है। भगवान बोले: निःसंदेह मन बड़ा चंचल और कठिनता से वश में आने वाला है, परंतु हे कौन्तेय! निरंतर अभ्यास और वैराग्य से इसे वश में किया जा सकता है।',
+          practical: 'You cannot cure overthinking with more thinking. Break the spiraling loop: focus on your breath, detach from hypothetical futures, and return fully to the present moment.'
+        },
+        {
+          id: 'overthinking-2',
+          emotion: 'overthinking',
+          ref: 'BG 4.40',
+          sanskrit: 'अज्ञश्चाश्रद्दधानश्च संशयात्मा विनश्यति।\nनायं लोकोऽस्ति न परो न सुखं संशयात्मनः॥',
+          translit: 'ajñaś cāśraddadhānaś ca saṁśayātmā vinaśyati |\nnāyaṁ loko \'sti na paro na sukhaṁ saṁśayātmanaḥ ||',
+          english: 'One who is ignorant, devoid of faith, and constantly doubting is ruined. For the doubting soul there is neither happiness in this world nor in the hereafter.',
+          hindi: 'जो विवेकहीन, श्रद्धारहित और सदा संशय में रहने वाला है, उसका पतन हो जाता है। ऐसे संशयग्रस्त (ओवरथिंकिंग करने वाले) मनुष्य के लिए न इस संसार में सुख है, न परलोक में।',
+          practical: 'Overthinking is chronic doubt and paralysis by analysis. Have faith in your preparation, stop endlessly examining 100 catastrophes, make a committed choice, and step forward.'
+        },
+        {
+          id: 'overthinking-3',
+          emotion: 'overthinking',
+          ref: 'BG 2.66',
+          sanskrit: 'नास्ति बुद्धिरयुक्तस्य न चायुक्तस्य भावना।\nन चाभावयतः शान्तिरशान्तस्य कुतः सुखम्॥',
+          translit: 'nāsti buddhir ayuktasya na cāyuktasya bhāvanā |\nna cābhāvayataḥ śāntir aśāntasya kutaḥ sukham ||',
+          english: 'One who is not connected to the Self has neither resolute intellect nor inner contemplation; without contemplation there is no peace, and without peace, where is happiness?',
+          hindi: 'जिसका मन संयमित नहीं है, उसके पास न स्थिर बुद्धि होती है और न ध्यान की भावना। अशांत मनुष्य को शांति कहाँ, और बिना शांति के सुख कहाँ?',
+          practical: 'A restless mind destroys clarity. Close your eyes, pause the internal debate, and take refuge in Krishna\'s silence within your heart.'
+        }
       ]
     };
 
@@ -1042,7 +1183,10 @@
       anger: { name: 'Anger', color: '#c62828', textClass: 'text-red-700', bgClass: 'bg-red-600' },
       peace: { name: 'Peace', color: '#e88ba5', textClass: 'text-pink-700', bgClass: 'bg-pink-400' },
       loneliness: { name: 'Loneliness', color: '#7e57c2', textClass: 'text-purple-700', bgClass: 'bg-purple-600' },
-      anxious: { name: 'Anxious', color: '#795548', textClass: 'text-stone-700', bgClass: 'bg-stone-600' }
+      anxious: { name: 'Anxious', color: '#795548', textClass: 'text-stone-700', bgClass: 'bg-stone-600' },
+      lust: { name: 'Lust (काम वासना)', color: '#991b1b', textClass: 'text-rose-700', bgClass: 'bg-rose-700' },
+      procrastination: { name: 'Procrastination', color: '#c25e00', textClass: 'text-amber-700', bgClass: 'bg-amber-600' },
+      overthinking: { name: 'Overthinking', color: '#2e3a8c', textClass: 'text-indigo-700', bgClass: 'bg-indigo-600' }
     };
 
     // Global State
