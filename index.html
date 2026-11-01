@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishna Path | Harmony in a Slip, Wisdom in a Shlok</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rozha+One&family=Tiro+Devanagari+Sanskrit:ital@0;1&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            cinzelDeco: ['"Cinzel Decorative"', 'serif'],
+            sanskrit: ['"Tiro Devanagari Sanskrit"', 'serif'],
+            rozha: ['"Rozha One"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            saffron: '#e67e22',
+            templeGold: '#dfb15b',
+            parchment: '#fcf8ee',
+            moodHappy: '#388e3c',
+            moodSad: '#5b9bd5',
+            moodLaziness: '#d4a017',
+            moodProtection: '#d9822b',
+            moodAnger: '#c62828',
+            moodPeace: '#e88ba5',
+            moodLoneliness: '#7e57c2',
+            moodAnxious: '#795548',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: rgba(15, 23, 42, 0.6); }
+    ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 9999px; }
+
+    /* Glass Jar Styling & Reflections */
+    .glass-jar {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.12) 100%);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 
+        inset 0 0 25px rgba(255, 255, 255, 0.25),
+        inset -10px 0 20px rgba(0, 0, 0, 0.2),
+        inset 10px 0 20px rgba(255, 255, 255, 0.3),
+        0 25px 45px rgba(0, 0, 0, 0.6),
+        0 0 35px rgba(223, 177, 91, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      border-top: none;
+      position: relative;
+    }
+
+    .jar-lid {
+      background: linear-gradient(180deg, #3d3d3d 0%, #1f242d 40%, #111419 100%);
+      box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.3),
+        0 6px 12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .jar-reflection {
+      position: absolute;
+      top: 5%;
+      left: 6%;
+      width: 14%;
+      height: 88%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.05) 75%, transparent 100%);
+      border-radius: 9999px;
+      pointer-events: none;
+      filter: blur(2px);
+    }
+
+    /* 3D Rolled Slip in Jar */
+    .rolled-slip {
+      width: 13px;
+      height: 100%;
+      border-radius: 6px;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      box-shadow: 
+        inset -2px 0 3px rgba(0, 0, 0, 0.35),
+        inset 2px 0 3px rgba(255, 255, 255, 0.5),
+        0 2px 4px rgba(0,0,0,0.3);
+    }
+    .rolled-slip:hover {
+      transform: translateY(-16px) scale(1.1);
+      z-index: 30;
+      filter: brightness(1.2) drop-shadow(0 0 8px currentColor);
+    }
+
+    /* Scroll Modal Paper Unfurling */
+    @keyframes unrollScroll {
+      0% {
+        transform: scale(0.2) rotate(-8deg);
+        opacity: 0;
+        max-height: 50px;
+      }
+      60% {
+        transform: scale(1.03) rotate(1deg);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+      }
+    }
+    .scroll-unroll {
+      animation: unrollScroll 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Breathing Circle Animation */
+    @keyframes breatheExpand {
+      0%, 100% { transform: scale(1); border-color: rgba(223, 177, 91, 0.3); }
+      40% { transform: scale(1.35); border-color: rgba(223, 177, 91, 0.9); }
+      65% { transform: scale(1.35); border-color: rgba(56, 142, 60, 0.9); }
+    }
+    .breathe-circle {
+      animation: breatheExpand 19s infinite ease-in-out;
+    }
+
+    /* Vintage Paper Borders */
+    .parchment-card {
+      background: radial-gradient(circle at 50% 20%, #fffdf8 0%, #fbf5e6 70%, #f2e5c9 100%);
+      box-shadow: 
+        0 20px 50px -10px rgba(0, 0, 0, 0.7),
+        0 0 0 1px rgba(184, 134, 11, 0.3),
+        inset 0 0 40px rgba(184, 134, 11, 0.15);
+    }
+
+    .shlok-border {
+      border: 2px solid #b8860b;
+      position: relative;
+    }
+    .shlok-border::before, .shlok-border::after {
+      content: "❖";
+      position: absolute;
+      color: #b8860b;
+      font-size: 14px;
+      line-height: 1;
+      background: #fbf5e6;
+      padding: 0 4px;
+    }
+    .shlok-border::before { top: -8px; left: 16px; }
+    .shlok-border::after { bottom: -8px; right: 16px; }
+
+    /* Particles Canvas */
+    #ambientCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#0a0d14] via-[#111724] to-[#07090e] text-slate-100 min-h-screen font-sans antialiased overflow-x-hidden selection:bg-amber-400 selection:text-slate-900">
+
+  <!-- Ambient Golden Diya Particles Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+
+  <!-- Sound Audio Toggle & Nav Bar -->
+  <header class="relative z-20 w-full max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-amber-300 p-0.5 shadow-lg shadow-amber-500/20">
+        <div class="w-full h-full bg-[#111724] rounded-full flex items-center justify-center text-amber-300">
+          <!-- Om Icon -->
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v2h-2zm0 4h2v6h-2z" opacity="0"/>
+            <!-- Stylized Sanskrit Om representation -->
+            <path d="M8.2 16.5c-1.3 0-2.3-.9-2.3-2.2 0-.8.4-1.6 1.1-2.1-.8-.5-1.2-1.3-1.2-2.1 0-1.5 1.3-2.6 3.1-2.6 1.7 0 2.9 1 2.9 2.5 0 .8-.4 1.6-1.1 2.1.8.6 1.3 1.4 1.3 2.3 0 1.5-1.4 2.1-3.8 2.1zm5.8-.3c-.6-.7-1-1.6-1-2.6 0-1.8 1.4-3.3 3.3-3.3s3.3 1.5 3.3 3.3c0 .9-.4 1.8-1 2.5l2.2 1.4c1-1.1 1.6-2.5 1.6-4 0-3.3-2.7-6-6-6s-6 2.7-6 6c0 1.5.6 2.9 1.6 4l2 1.3zm3-10.7c1.3 0 2.5.4 3.4 1.1l-1.3 1.5c-.6-.4-1.3-.7-2.1-.7-1.7 0-3 1.3-3 3h-2c0-2.8 2.2-4.9 5-4.9z"/>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <h1 class="text-xl font-bold tracking-wider font-cinzel text-amber-200">KRISHNA PATH</h1>
+        <p class="text-[11px] uppercase tracking-widest text-amber-400/80 font-medium">Harmony in a Slip • Wisdom in a Shlok</p>
+      </div>
+    </div>
+
+    <!-- Right Controls: Audio, Breathing, Bookmarks -->
+    <div class="flex items-center space-x-2 sm:space-x-3">
+      <!-- Pranayama / Breathing Tool Button -->
+      <button id="breatheToggleBtn" title="Mindful Breathing (Pranayama)" class="px-3 py-1.5 rounded-full bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs text-amber-200 flex items-center space-x-1.5 transition-all shadow-sm">
+        <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" stroke-width="2"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3"/>
+        </svg>
+        <span class="hidden sm:inline">Prāṇāyāma</span>
+      </button>
+
+      <!-- Bookmarks Drawer Trigger -->
+      <button id="savedSlipsBtn" title="Saved Slips" class="px-3 py-1.5 rounded-full bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-xs text-amber-200 flex items-center space-x-1.5 transition-all shadow-sm">
+        <svg class="w-3.5 h-3.5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
+        </svg>
+        <span class="hidden sm:inline">Saved Slips</span>
+        <span id="savedCountBadge" class="bg-amber-500 text-slate-950 font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center ml-1">0</span>
+      </button>
+
+      <!-- Sound Toggle Button -->
+      <button id="soundToggleBtn" class="p-2 rounded-full bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-amber-200 transition-all shadow-sm" title="Toggle Sound Chimes">
+        <svg id="soundIconOn" class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+        </svg>
+        <svg id="soundIconOff" class="w-4 h-4 text-slate-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="relative z-10 max-w-5xl mx-auto px-4 pb-16 pt-2 flex flex-col items-center">
+    
+    <!-- Hero Title & Sanskrit Blessing -->
+    <div class="text-center mb-6 max-w-2xl">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs mb-3 font-cinzel">
+        <span>॥ योगस्थः कुरु कर्माणि ॥</span>
+        <span class="text-amber-500">•</span>
+        <span>Established in Yoga, Perform Your Duty</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-cinzel font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-200 to-amber-400 drop-shadow-sm">
+        Seek Krishna's Counsel
+      </h2>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 font-light">
+        Whatever emotion is weighing or lifting your heart right now, tap a slip in the sacred jar to unfold the Bhagavad Gita's timeless wisdom.
+      </p>
+    </div>
+
+    <!-- Center Stage: The Krishna Path Jar -->
+    <div class="relative w-full max-w-[360px] sm:max-w-[400px] flex flex-col items-center mt-2 mb-8 select-none">
+      
+      <!-- Jar Top / Lid with Metal Rims -->
+      <div class="jar-lid w-48 sm:w-56 h-7 rounded-t-xl relative z-20 flex items-center justify-center">
+        <div class="w-full h-1 bg-amber-400/30 absolute top-1 rounded-full"></div>
+        <div class="text-[9px] tracking-widest text-amber-300/60 uppercase font-cinzel">Sacred Vessel</div>
+      </div>
+      <div class="w-44 sm:w-52 h-4 bg-gradient-to-r from-slate-700 via-slate-500 to-slate-800 rounded-b-sm border-t border-slate-600 shadow-md relative z-10"></div>
+      <div class="w-40 sm:w-48 h-3 bg-white/20 blur-[1px] relative z-10 -mt-1 rounded-full"></div>
+
+      <!-- Glass Jar Body -->
+      <div id="interactiveJar" class="glass-jar w-full h-[410px] sm:h-[440px] rounded-b-[48px] rounded-t-[14px] p-4 flex flex-col justify-between overflow-hidden cursor-pointer group">
+        
+        <!-- Jar Light Reflection Sweep -->
+        <div class="jar-reflection"></div>
+        <div class="absolute top-10 right-4 w-2 h-72 bg-gradient-to-b from-white/30 to-transparent rounded-full blur-[1px]"></div>
+
+        <!-- Upper Section: Vertical Rolled Slips visible through the glass -->
+        <div id="slipsContainerTop" class="relative z-10 w-full h-24 pt-1 flex items-end justify-center space-x-1.5 sm:space-x-2 px-3 overflow-visible">
+          <!-- Dynamically populated or static colored rolled slips -->
+        </div>
+
+        <!-- Center Label: Exact "Krishna Path" Wreath & Silhouette -->
+        <div class="relative z-20 mx-auto w-full max-w-[270px] bg-[#fbf8f0] text-slate-800 rounded-xl p-3.5 shadow-2xl border-2 border-stone-800/80 transition-transform duration-300 group-hover:scale-[1.02]">
+          
+          <!-- Inner Double Decorative Border -->
+          <div class="border border-stone-600/60 p-2.5 rounded-lg flex flex-col items-center text-center relative bg-[#fdfbf6]">
+            
+            <!-- Header Brand: krishna path (exact styling as reel) -->
+            <div class="w-full pb-1 border-b border-stone-300 mb-1">
+              <h3 class="text-xl sm:text-2xl font-cinzel tracking-widest font-bold lowercase text-stone-900 leading-none">
+                krishna path
+              </h3>
+            </div>
+
+            <!-- Authentic Centerpiece SVG: Peacock Feather Wreath + Krishna Flute Silhouette -->
+            <div class="relative w-32 h-32 my-1 flex items-center justify-center">
+              
+              <!-- Subtle Golden Sun aura behind Krishna -->
+              <div class="absolute w-14 h-14 rounded-full bg-gradient-to-br from-amber-300/80 to-amber-500/70 blur-[1px]"></div>
+
+              <!-- Krishna Silhouette Playing Flute -->
+              <svg class="w-16 h-16 relative z-10 fill-stone-900 drop-shadow-sm" viewBox="0 0 100 100">
+                <!-- Head with Peacock Crown (Mor Mukut) -->
+                <ellipse cx="50" cy="38" rx="8" ry="9" />
+                <!-- Peacock feather crest on head -->
+                <path d="M50 29 C52 22, 58 18, 59 13 C54 17, 51 22, 49 28 Z" fill="#2d6a4f"/>
+                <circle cx="56" cy="16" r="3" fill="#e9c46a"/>
+                <circle cx="56" cy="16" r="1.5" fill="#1d3557"/>
+                <!-- Face side profile with flute -->
+                <path d="M43 37 Q46 38 49 41 L47 48 Q43 45 42 41 Z" />
+                <!-- Neck & Shoulders -->
+                <path d="M46 47 Q38 52 35 62 L65 62 Q62 52 54 47 Z" />
+                <!-- Arms holding Bansuri (Flute) -->
+                <path d="M38 58 Q46 54 53 53 Q57 54 62 57" stroke="#1c1917" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+                <!-- Flute (Bansuri) angled across lips -->
+                <line x1="28" y1="42" x2="72" y2="52" stroke="#b45309" stroke-width="2.8" stroke-linecap="round"/>
+                <!-- Flute hanging tassels -->
+                <path d="M29 43 Q28 48 30 52" stroke="#d97706" stroke-width="1.2" fill="none"/>
+              </svg>
+
+              <!-- Circular Peacock Feather Wreath -->
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 120 120">
+                <defs>
+                  <g id="feather">
+                    <!-- Stem -->
+                    <path d="M0,0 Q-2,-10 0,-18" stroke="#4a5568" stroke-width="1" fill="none" />
+                    <!-- Feather eye outer vane -->
+                    <ellipse cx="0" cy="-19" rx="5" ry="6.5" fill="none" stroke="#2b2d42" stroke-width="1.2" />
+                    <!-- Feather eye inner rings -->
+                    <ellipse cx="0" cy="-19" rx="3.5" ry="4.5" fill="#2d6a4f" />
+                    <ellipse cx="0" cy="-19" rx="2" ry="2.8" fill="#e9c46a" />
+                    <ellipse cx="0" cy="-19" rx="1.1" ry="1.4" fill="#1d3557" />
+                  </g>
+                </defs>
+
+                <!-- Repeated feathers in a circle -->
+                <g transform="translate(60,60)">
+                  <!-- 16 feathers placed symmetrically around the radius -->
+                  <g transform="rotate(0) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(22.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(45) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(67.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(90) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(112.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(135) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(157.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(180) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(202.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(225) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(247.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(270) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(292.5) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(315) translate(0,-42)"><use href="#feather"/></g>
+                  <g transform="rotate(337.5) translate(0,-42)"><use href="#feather"/></g>
+                </g>
+              </svg>
+            </div>
+
+            <!-- Tagline -->
+            <p class="text-[10px] font-semibold tracking-wide text-stone-800 uppercase mt-0.5">
+              Harmony in a Slip, Wisdom in a Shlok
+            </p>
+
+            <!-- Mini Color Grid / Guide on the label (Just like the real product) -->
+            <div class="grid grid-cols-4 gap-x-2 gap-y-1.5 w-full mt-2.5 pt-2 border-t border-stone-300/80 text-[8.5px] font-medium text-stone-700">
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodHappy mb-0.5"></span>
+                <span>Happy</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodSad mb-0.5"></span>
+                <span>Sad</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodLaziness mb-0.5"></span>
+                <span>Laziness</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodProtection mb-0.5"></span>
+                <span>Protection</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodAnger mb-0.5"></span>
+                <span>Anger</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodPeace mb-0.5"></span>
+                <span>Peace</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodLoneliness mb-0.5"></span>
+                <span>Loneliness</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodAnxious mb-0.5"></span>
+                <span>Anxious</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Lower Section: Bottom of rolled slips stacked inside the base -->
+        <div id="slipsContainerBottom" class="relative z-10 w-full h-20 flex items-start justify-center space-x-1.5 sm:space-x-2 px-3 overflow-visible pb-2">
+          <!-- Dynamic bottom slips -->
+        </div>
+
+      </div>
+
+      <!-- Jar Base Shadow & Tap Hint -->
+      <div class="w-3/4 h-5 bg-amber-400/10 blur-xl rounded-full mt-2"></div>
+      <p class="text-[11px] text-amber-300/60 mt-1 flex items-center space-x-1.5 tracking-wider">
+        <span>👆 Tap the jar or select an emotion below</span>
+      </p>
+    </div>
+
+    <!-- Emotion Selector Grid / Interactive Slips Dock -->
+    <div class="w-full max-w-4xl bg-slate-900/60 border border-slate-800 rounded-2xl p-4 sm:p-5 backdrop-blur-md shadow-xl">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3 border-b border-slate-800 pb-2.5">
+        <div>
+          <h3 class="text-sm font-semibold tracking-wider text-amber-200 uppercase font-cinzel">Choose Your Present State</h3>
+          <p class="text-xs text-slate-400">Receive a Shloka specifically addressing your emotional frequency</p>
+        </div>
+        <button id="randomDrawBtn" class="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-slate-950 font-semibold text-xs flex items-center space-x-1.5 shadow-md shadow-amber-900/30 transition-transform active:scale-95">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+            <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v-2h2v2zm0-4H9V5h2v4z"/>
+          </svg>
+          <span>Draw Random Slip</span>
+        </button>
+      </div>
+
+      <!-- 8 Emotion Pills Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+        
+        <!-- Happy -->
+        <button data-emotion="happy" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-emerald-900/50 hover:border-emerald-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodHappy shadow-md shadow-emerald-900/50 group-hover:ring-2 ring-emerald-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-emerald-300">Happy</div>
+            <div class="text-[10px] text-slate-400">Divine Joy • BG 5.24</div>
+          </div>
+        </button>
+
+        <!-- Sad -->
+        <button data-emotion="sad" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-sky-900/50 hover:border-sky-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodSad shadow-md shadow-sky-900/50 group-hover:ring-2 ring-sky-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-sky-300">Sad</div>
+            <div class="text-[10px] text-slate-400">Solace • BG 2.14</div>
+          </div>
+        </button>
+
+        <!-- Laziness -->
+        <button data-emotion="laziness" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-yellow-900/50 hover:border-yellow-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodLaziness shadow-md shadow-yellow-900/50 group-hover:ring-2 ring-yellow-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-yellow-300">Laziness</div>
+            <div class="text-[10px] text-slate-400">Awakening • BG 3.8</div>
+          </div>
+        </button>
+
+        <!-- Protection -->
+        <button data-emotion="protection" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-amber-900/50 hover:border-amber-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodProtection shadow-md shadow-amber-900/50 group-hover:ring-2 ring-amber-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-amber-300">Protection</div>
+            <div class="text-[10px] text-slate-400">Reassurance • BG 9.22</div>
+          </div>
+        </button>
+
+        <!-- Anger -->
+        <button data-emotion="anger" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-red-900/50 hover:border-red-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodAnger shadow-md shadow-red-900/50 group-hover:ring-2 ring-red-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-red-300">Anger</div>
+            <div class="text-[10px] text-slate-400">Restraint • BG 2.63</div>
+          </div>
+        </button>
+
+        <!-- Peace -->
+        <button data-emotion="peace" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-pink-900/50 hover:border-pink-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodPeace shadow-md shadow-pink-900/50 group-hover:ring-2 ring-pink-300 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-pink-300">Peace</div>
+            <div class="text-[10px] text-slate-400">Equanimity • BG 2.70</div>
+          </div>
+        </button>
+
+        <!-- Loneliness -->
+        <button data-emotion="loneliness" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-purple-900/50 hover:border-purple-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodLoneliness shadow-md shadow-purple-900/50 group-hover:ring-2 ring-purple-300 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-purple-300">Loneliness</div>
+            <div class="text-[10px] text-slate-400">Ever Present • BG 18.61</div>
+          </div>
+        </button>
+
+        <!-- Anxious -->
+        <button data-emotion="anxious" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-stone-800 hover:border-stone-500 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodAnxious shadow-md shadow-stone-900/50 group-hover:ring-2 ring-stone-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-stone-300">Anxious</div>
+            <div class="text-[10px] text-slate-400">Surrender • BG 2.47</div>
+          </div>
+        </button>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- MODAL: UNFURLED SACRED WISDOM SCROLL -->
+  <!-- ============================================== -->
+  <div id="scrollModal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div id="scrollCard" class="parchment-card text-stone-900 w-full max-w-2xl rounded-2xl p-5 sm:p-7 relative border-4 border-amber-600/40 shadow-2xl max-h-[92vh] overflow-y-auto">
+      
+      <!-- Top Scroll Roll Ornament -->
+      <div class="w-full flex justify-between items-center pb-3 border-b border-stone-300/80 mb-4">
+        <div class="flex items-center space-x-2">
+          <span id="scrollColorBadge" class="w-3.5 h-3.5 rounded-full inline-block shadow-sm"></span>
+          <span id="scrollEmotionName" class="text-xs font-bold uppercase tracking-wider font-cinzel text-amber-900">Emotion Slip</span>
+          <span class="text-stone-400">•</span>
+          <span id="scrollVerseRef" class="text-xs font-semibold px-2 py-0.5 rounded bg-amber-100 border border-amber-300 text-amber-900 font-cinzel">BG 2.47</span>
+        </div>
+        <button id="closeScrollBtn" class="text-stone-500 hover:text-stone-900 p-1.5 rounded-lg hover:bg-amber-100 transition-colors" title="Return to Jar">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sacred Sanskrit Verse Box -->
+      <div class="shlok-border bg-[#f8f2e2] rounded-xl p-4 sm:p-5 my-3 text-center shadow-inner">
+        <div class="text-amber-800 text-xs font-cinzel tracking-widest uppercase mb-1">॥ श्रीमद्भगवद्गीता ॥</div>
+        <div id="sanskritVerse" class="font-sanskrit text-lg sm:text-2xl text-stone-900 font-semibold leading-relaxed tracking-wide my-2">
+          कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥
+        </div>
+        <div id="transliteration" class="text-xs sm:text-sm text-stone-600 italic font-serif mt-2 border-t border-amber-200/60 pt-2">
+          karmaṇy evādhikāras te mā phaleṣu kadācana |<br>mā karma-phala-hetur bhūr mā te saṅgo 'stv akarmaṇi ||
+        </div>
+      </div>
+
+      <!-- Hindi Bhavartha -->
+      <div class="mt-3 p-3 rounded-lg bg-amber-500/10 border border-amber-500/20">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-amber-900 flex items-center space-x-1.5 mb-1 font-cinzel">
+          <span>सरल भावार्थ (Hindi)</span>
+        </div>
+        <p id="hindiMeaning" class="text-xs sm:text-sm text-stone-800 leading-relaxed font-sans">
+          तुम्हारा अधिकार केवल कर्म करने में है, उसके फलों में कभी नहीं। इसलिए कर्म के फल की इच्छा मत रखो और न ही अकर्मण्यता (कर्म न करने) के प्रति आसक्त हो।
+        </p>
+      </div>
+
+      <!-- English Translation -->
+      <div class="mt-3">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-stone-500 mb-1 font-cinzel">
+          Wisdom Translation (English)
+        </div>
+        <p id="englishMeaning" class="text-xs sm:text-sm text-stone-800 leading-relaxed">
+          You have a right only to perform your duty, but never to the fruits of your actions. Let not the fruits of action be your motive, nor let your attachment be to inaction.
+        </p>
+      </div>
+
+      <!-- Practical Life Takeaway / Mindful Application -->
+      <div class="mt-4 p-3.5 rounded-xl bg-gradient-to-r from-emerald-950/10 via-amber-900/10 to-transparent border-l-4 border-amber-700">
+        <div class="text-xs font-bold text-amber-950 flex items-center space-x-1.5 uppercase tracking-wide font-cinzel">
+          <svg class="w-4 h-4 text-amber-700" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14H8a4 4 0 01-3.66-2.42A5.965 5.965 0 014 10a6 6 0 1112 0c0 .548-.074 1.077-.21 1.58A4 4 0 0112 14z"/>
+          </svg>
+          <span>Mindful Practice for Today</span>
+        </div>
+        <p id="practicalWisdom" class="text-xs sm:text-sm text-stone-800 mt-1 font-medium">
+          Surrender anxiety over the final outcome. Direct 100% of your current mental presence into the effort right in front of you. Peace is found in doing, not in obsessing over results.
+        </p>
+      </div>
+
+      <!-- Action Toolbar -->
+      <div class="mt-6 pt-3 border-t border-stone-300 flex flex-wrap items-center justify-between gap-2.5">
+        
+        <div class="flex items-center space-x-2">
+          <!-- Text to Speech Listen -->
+          <button id="speakVerseBtn" class="px-3 py-1.5 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-800 text-xs font-semibold flex items-center space-x-1.5 transition-colors">
+            <svg id="speechIcon" class="w-3.5 h-3.5 text-stone-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 6v12m0 0l-3.75-3.75H5a1 1 0 01-1-1v-2.5a1 1 0 011-1h3.25L12 6z"/>
+            </svg>
+            <span id="speechBtnText">Listen</span>
+          </button>
+
+          <!-- Bookmark Toggle -->
+          <button id="bookmarkSlipBtn" class="px-3 py-1.5 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-800 text-xs font-semibold flex items-center space-x-1.5 transition-colors">
+            <svg id="bookmarkIcon" class="w-3.5 h-3.5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+            <span id="bookmarkBtnText">Save Slip</span>
+          </button>
+
+          <!-- Copy Shlok -->
+          <button id="copyVerseBtn" class="px-3 py-1.5 rounded-lg bg-stone-200/80 hover:bg-stone-300 text-stone-800 text-xs font-semibold flex items-center space-x-1.5 transition-colors">
+            <svg class="w-3.5 h-3.5 text-stone-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <div class="flex items-center space-x-2 w-full sm:w-auto justify-end">
+          <!-- Draw Another for same Emotion -->
+          <button id="drawAnotherBtn" class="px-3 py-1.5 rounded-lg bg-amber-800 hover:bg-amber-900 text-amber-50 text-xs font-semibold flex items-center space-x-1.5 transition-all shadow-sm">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            <span>Another Slip</span>
+          </button>
+
+          <!-- Return to Jar -->
+          <button id="returnJarBtn" class="px-4 py-1.5 rounded-lg bg-stone-900 hover:bg-stone-800 text-amber-200 text-xs font-cinzel font-semibold transition-all">
+            Return to Jar
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL: MINDFUL BREATHING (PRANAYAMA) -->
+  <!-- ============================================== -->
+  <div id="breatheModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-slate-900 border border-slate-700 max-w-sm w-full rounded-2xl p-6 text-center relative shadow-2xl">
+      <button id="closeBreatheBtn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div class="text-xs uppercase tracking-widest text-amber-400 font-cinzel mb-1">Prāṇāyāma Sanctuary</div>
+      <h3 class="text-xl font-bold text-slate-100 font-cinzel">Calm the Agitated Mind</h3>
+      <p class="text-xs text-slate-400 mt-1 mb-6">4s Inhale • 7s Stillness • 8s Release</p>
+
+      <!-- Breathing Ring Display -->
+      <div class="relative w-48 h-48 mx-auto flex items-center justify-center mb-6">
+        <div class="breathe-circle absolute inset-0 rounded-full border-4 border-amber-400/40 bg-gradient-to-br from-amber-500/10 to-emerald-500/10"></div>
+        <div class="relative z-10 flex flex-col items-center">
+          <span id="breathPhaseText" class="text-xl font-bold text-amber-200 font-cinzel tracking-wider">Inhale</span>
+          <span id="breathSeconds" class="text-3xl font-bold text-white mt-1">4</span>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-300 italic mb-4">
+        "When the breath is unsteady, all is unsteady; when the breath is stilled, all is stilled."
+      </p>
+
+      <button id="finishBreatheBtn" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 font-bold text-xs uppercase tracking-wider font-cinzel">
+        I Feel Centered
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- DRAWER: SAVED / BOOKMARKED SLIPS -->
+  <!-- ============================================== -->
+  <div id="savedDrawer" class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-slate-900/95 backdrop-blur-xl border-l border-slate-800 p-5 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+      <div class="flex items-center space-x-2">
+        <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/>
+        </svg>
+        <h3 class="text-base font-bold text-amber-200 font-cinzel tracking-wide">Saved Wisdom Slips</h3>
+      </div>
+      <button id="closeSavedDrawer" class="text-slate-400 hover:text-white p-1">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Saved Slips List -->
+    <div id="savedSlipsList" class="flex-1 overflow-y-auto py-4 space-y-3">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="pt-3 border-t border-slate-800 text-center">
+      <p class="text-[11px] text-slate-500">Stored safely in your local journal on this browser.</p>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-stone-900 border border-amber-500 text-amber-200 px-4 py-2 rounded-full text-xs shadow-2xl flex items-center space-x-2 pointer-events-none opacity-0 transition-opacity duration-300">
+    <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+    </svg>
+    <span id="toastMessage">Wisdom copied to clipboard</span>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- JAVASCRIPT: LOGIC, AUDIO & SHLOKA DATABASE -->
+  <!-- ============================================== -->
+  <script>
+    // Bhagavad Gita Comprehensive Database (32 Shlokas, 4 per emotion)
+    const GITA_WISDOM_DB = {
+      happy: [
+        {
+          id: 'happy-1',
+          emotion: 'happy',
+          ref: 'BG 5.24',
+          sanskrit: 'योऽन्तःसुखोऽन्तरारामस्तथान्तर्ज्योतिरेव यः।\nस योगी ब्रह्मनिर्वाणं ब्रह्मभूतोऽधिगच्छति॥',
+          translit: 'yo \'ntaḥ-sukho \'ntar-ārāmas tathāntar-jyotir eva yaḥ |\nsa yogī brahma-nirvāṇaṁ brahma-bhūto \'dhigacchati ||',
+          english: 'One whose happiness is within, who delights internally and is illuminated from within, is truly the perfect mystic and attains liberation in the Supreme.',
+          hindi: 'जो मनुष्य अंतरात्मा में ही सुख का अनुभव करता है, अपने भीतर ही रमण करता है और जिसकी आत्मा ज्ञान के प्रकाश से जगमगा रही है, वह परम शांति प्राप्त करता है।',
+          practical: 'Ground your present happiness not on fickle outer events, but on your inner divine stillness. When joy is sourced within, it never leaves.'
+        },
+        {
+          id: 'happy-2',
+          emotion: 'happy',
+          ref: 'BG 2.65',
+          sanskrit: 'प्रसादे सर्वदुःखानां हानिरस्योपजायते।\nप्रसन्नचेतसो ह्याशु बुद्धिः पर्यवतिष्ठते॥',
+          translit: 'prasāde sarva-duḥkhānāṁ hānir asyopajāyate |\nprasanna-cetaso hy āśu buddhiḥ paryavatiṣṭhate ||',
+          english: 'With the attainment of inner grace and tranquility, all sorrows are eradicated. For one with a serene mind, intellect quickly becomes steady.',
+          hindi: 'मन की प्रसन्नता और संतुष्टि प्राप्त होने पर समस्त दुखों का नाश हो जाता है; और ऐसे शांतचित्त मनुष्य की बुद्धि शीघ्र ही स्थिर हो जाती है।',
+          practical: 'Celebrate joy by sharing calmness. A serene, contented mind produces the clearest judgments and creative inspiration.'
+        },
+        {
+          id: 'happy-3',
+          emotion: 'happy',
+          ref: 'BG 17.16',
+          sanskrit: 'मनःप्रसादः सौम्यत्वं मौनमात्मविनिग्रहः।\nभावसंशुद्धिरित्येतत्तपो मानसमुच्यते॥',
+          translit: 'manaḥ-prasādaḥ saumyatvaṁ maunam ātma-vinigrahaḥ |\nbhāva-saṁśuddhir ity etat tapo mānasam ucyate ||',
+          english: 'Serenity of thought, gentleness of demeanor, mindful quietude, self-restraint, and purity of motive—this is declared as austerity of the mind.',
+          hindi: 'मन की प्रसन्नता, सौम्यता, मौन, आत्म-नियंत्रण और विचारों की पवित्रता—यह मन का सच्चा तप कहलाती है।',
+          practical: 'True happiness manifests as gentle kindness and a quiet heart. Radiate this good energy outward to uplift someone today.'
+        },
+        {
+          id: 'happy-4',
+          emotion: 'happy',
+          ref: 'BG 18.37',
+          sanskrit: 'यत्तदग्रे विषमिव परिणामेऽमृतोपमम्।\nतत्सुखं सात्विकं प्रोक्तमात्मबुद्धिप्रसादजम्॥',
+          translit: 'yat tad agre viṣam iva pariṇāme \'mṛtopamam |\ntat sukhaṁ sāttvikaṁ proktam ātma-buddhi-prasāda-jam ||',
+          english: 'That joy which seems like poison in the beginning but tastes like nectar in the end, born of the serene realization of the Self, is Sattvic (pure).',
+          hindi: 'जो सुख आरंभ में विष जैसा कष्टदायी लगे किंतु अंत में अमृत के समान हो, जो आत्म-साक्षात्कार से उत्पन्न होता है, वही सात्विक आनंद है।',
+          practical: 'Honor the disciplined habits that brought you to this good moment. Cultivating pure, purposeful routines yields lasting sweetness.'
+        }
+      ],
+
+      sad: [
+        {
+          id: 'sad-1',
+          emotion: 'sad',
+          ref: 'BG 2.14',
+          sanskrit: 'मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः।\nआगमापायिनोऽनित्यास्तांस्तितिक्षस्व भारत॥',
+          translit: 'mātrā-sparśās tu kaunteya śītoṣṇa-sukha-duḥkha-dāḥ |\nāgamāpāyino \'nityās tāṁs titikṣasva bhārata ||',
+          english: 'The contact of the senses with their objects produces fleeting perceptions of cold and heat, pleasure and pain. They come and go like seasons; endure them bravely, O Arjuna.',
+          hindi: 'हे कुंतीपुत्र! सर्दी-गर्मी और सुख-दुःख की अनुभूतियाँ इंद्रियों और विषयों के संयोग से होती हैं। ये क्षणिक और नाशवान हैं; तुम इन्हें धैर्यपूर्वक सहन करो।',
+          practical: 'Grief and sorrow are seasonal waves. Remind yourself: "This pain has arrived, but it will also pass." Anchor yourself in your timeless core.'
+        },
+        {
+          id: 'sad-2',
+          emotion: 'sad',
+          ref: 'BG 2.11',
+          sanskrit: 'अशोच्यानन्वशोचस्त्वं प्रज्ञावादांश्च भाषसे।\nगतासूनगतासूंश्च नानुशोचन्ति पण्डिताः॥',
+          translit: 'aśocyān anvaśocas tvaṁ prajñā-vādāṁś ca bhāṣase |\ngatāsūn agatāsūṁś ca nānuśocanti paṇḍitāḥ ||',
+          english: 'You grieve for that which is not worthy of grief, yet speak wise words. The truly wise grieve neither for the living nor for the departed.',
+          hindi: 'तुम उनके लिए शोक कर रहे हो जो शोक के योग्य नहीं हैं, और फिर भी ज्ञानियों जैसी बातें करते हो। ज्ञानी जन न तो जीवित के लिए और न ही मृत के लिए शोक करते हैं।',
+          practical: 'Examine what is causing your heartache. Much sorrow arises from holding tightly to expectations of how life "should" have been. Release the burden.'
+        },
+        {
+          id: 'sad-3',
+          emotion: 'sad',
+          ref: 'BG 2.20',
+          sanskrit: 'न जायते म्रियते वा कदाचिन्नायं भूत्वा भविता वा न भूयः।\nअजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे॥',
+          translit: 'na jāyate mriyate vā kadācin nāyaṁ bhūtvā bhavitā vā na bhūyaḥ |\najo nityaḥ śāśvato \'yaṁ purāṇo na hanyate hanyamāne śarīre ||',
+          english: 'The soul is never born, nor does it ever die; unborn, eternal, imperishable and ancient, it is not harmed when the body is hurt or altered.',
+          hindi: 'आत्मा न कभी जन्म लेती है और न कभी मरती है। यह अजन्मी, नित्य, सनातन और पुरातन है। शरीर के नष्ट होने पर भी इसका नाश नहीं होता।',
+          practical: 'Whatever loss or setback you mourn, recognize that the deepest essence of who you love and who you are remains untouched and eternal.'
+        },
+        {
+          id: 'sad-4',
+          emotion: 'sad',
+          ref: 'BG 2.27',
+          sanskrit: 'जातस्य हि ध्रुवो मृत्युर्ध्रुवं जन्म मृतस्य च।\nतस्मादपरिहार्येऽर्थे न त्वं शोचितुमर्हसि॥',
+          translit: 'jātasya hi dhruvo mṛtyur dhruvaṁ janma mṛtasya ca |\ntasmād aparihārye \'rthe na tvaṁ śocitum arhasi ||',
+          english: 'For that which is born, conclusion is certain, and for what concludes, rebirth is certain. Over this unavoidable reality, you ought not to lament.',
+          hindi: 'जन्म लेने वाले की मृत्यु निश्चित है और मृत का पुनः जन्म निश्चित है। अतः इस अनिवार्य नियम पर तुम्हें शोक नहीं करना चाहिए।',
+          practical: 'Acceptance is the quickest remedy for sadness. Make peace with life\'s natural cycles and open space for tomorrow\'s renewal.'
+        }
+      ],
+
+      laziness: [
+        {
+          id: 'laziness-1',
+          emotion: 'laziness',
+          ref: 'BG 3.8',
+          sanskrit: 'नियतं कुरु कर्म त्वं कर्म ज्यायो ह्यकर्मणः।\nशरीरयात्रापि च ते न प्रसिद्ध्येदकर्मणः॥',
+          translit: 'niyataṁ kuru karma tvaṁ karma jyāyo hy akarmaṇaḥ |\nśarīra-yātrāpi ca te na prasiddhyed akarmaṇaḥ ||',
+          english: 'Perform your prescribed duty, for action is far superior to inaction. Without performing action, even the maintenance of your physical body would fail.',
+          hindi: 'तुम अपना नियत कर्तव्य कर्म करो, क्योंकि कर्म न करने की अपेक्षा कर्म करना श्रेष्ठ है। कर्म किए बिना तो तुम्हारा शरीर-निर्वाह भी नहीं हो सकता।',
+          practical: 'Do not wait for motivation to strike. Start with just 5 minutes of focused action. Movement creates momentum; inaction breeds lethargy.'
+        },
+        {
+          id: 'laziness-2',
+          emotion: 'laziness',
+          ref: 'BG 6.5',
+          sanskrit: 'उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः॥',
+          translit: 'uddhared ātmanātmānaṁ nātmānam avasādayet |\nātmaiva hy ātmano bandhur ātmaiva ripur ātmanaḥ ||',
+          english: 'Elevate yourself through your own mind; do not drag yourself down. For the mind alone is your greatest ally, and the undisciplined mind your worst enemy.',
+          hindi: 'मनुष्य को चाहिए कि वह अपने मन द्वारा अपना उद्धार करे, अपना पतन न होने दे। क्योंकि मन ही मनुष्य का मित्र है और मन ही उसका शत्रु है।',
+          practical: 'Be your own savior today. Refuse self-sabotaging thoughts and gently stand up to take responsibility for your potential.'
+        },
+        {
+          id: 'laziness-3',
+          emotion: 'laziness',
+          ref: 'BG 2.3',
+          sanskrit: 'क्लैब्यं मा स्म गमः पार्थ नैतत्त्वय्युपपद्यते।\nक्षुद्रं हृदयदौर्बल्यं त्यक्त्वोत्तिष्ठ परन्तप॥',
+          translit: 'klaibyaṁ mā sma gamaḥ pārtha naitat tvayy upapadyate |\nkṣudraṁ hṛdaya-daurbalyaṁ tyaktvottiṣṭha paran-tapa ||',
+          english: 'Do not yield to unmanliness and paralysis, O Partha! It is unworthy of you. Cast off this petty faint-heartedness and arise, conqueror of foes!',
+          hindi: 'हे पार्थ! नपुंसकता और कायरता को मत प्राप्त हो, यह तुम्हें शोभा नहीं देती। हृदय की इस तुच्छ दुर्बलता को त्याग कर उठ खड़े होओ!',
+          practical: 'Hear Krishna\'s direct command: Arise! Discard the comfort of sluggishness. The greatness within you cannot fulfill its mission while lying down.'
+        },
+        {
+          id: 'laziness-4',
+          emotion: 'laziness',
+          ref: 'BG 18.39',
+          sanskrit: 'यदग्रे चानुबन्धे च सुखं मोहनमात्मनः।\nनिद्रालस्यप्रमादोत्थं तत्तामसमुदाहृतम्॥',
+          translit: 'yad agre cānubandhe ca sukhaṁ mohanam ātmanaḥ |\nnidrālasya-pramādotthaṁ tat tāmasam udāhṛtam ||',
+          english: 'That false pleasure which deludes the soul from beginning to end, arising from sleep, indolence, and negligence, is termed Tamasic (inert).',
+          hindi: 'जो सुख आरंभ में और अंत में भी आत्मा को मोह में डाले रखता है, और जो निद्रा, आलस्य तथा प्रमाद से उत्पन्न होता है, वह तामसिक कहलाता है।',
+          practical: 'Notice when comfort is an illusion tricking you into wasting precious vitality. Choose productive exertion over dull regret.'
+        }
+      ],
+
+      protection: [
+        {
+          id: 'protection-1',
+          emotion: 'protection',
+          ref: 'BG 9.22',
+          sanskrit: 'अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते।\nतेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम्॥',
+          translit: 'ananyāś cintayanto māṁ ye janāḥ paryupāsate |\nteṣāṁ nityābhiyuktānāṁ yoga-kṣemaṁ vahāmy aham ||',
+          english: 'To those who always remember Me with focused devotion, meditating upon My divine nature, I carry what they lack and preserve what they have.',
+          hindi: 'जो अनन्य भाव से मेरा चिंतन करते हुए मेरी उपासना करते हैं, उन निरंतर युक्त भक्तों का योगक्षेम (जो उनके पास नहीं है उसे देना और जो है उसकी रक्षा करना) मैं स्वयं वहन करता हूँ।',
+          practical: 'You are guarded by supreme grace. When your intent is righteous, you do not walk alone. Lay down your defensive anxiety.'
+        },
+        {
+          id: 'protection-2',
+          emotion: 'protection',
+          ref: 'BG 18.66',
+          sanskrit: 'सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।\nअहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥',
+          translit: 'sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja |\nahaṁ tvāṁ sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ ||',
+          english: 'Abandon all varieties of worldly burdens and surrender unto Me alone. I shall deliver you from all fear and sin; do not grieve.',
+          hindi: 'सब धर्मों और चिंताओं को छोड़कर केवल मेरी शरण में आ जाओ। मैं तुम्हें समस्त पापों और बंधनों से मुक्त कर दूँगा, शोक मत करो।',
+          practical: 'Surrender does not mean giving up; it means trusting that the higher universe has your back. Exhale and place your burden in Krishna\'s hands.'
+        },
+        {
+          id: 'protection-3',
+          emotion: 'protection',
+          ref: 'BG 9.31',
+          sanskrit: 'क्षिप्रं भवति धर्मात्मा शश्वच्छान्तिं निगच्छति।\nकौन्तेय प्रतिजानीहि न मे भक्तः प्रणश्यति॥',
+          translit: 'kṣipraṁ bhavati dharmātmā śaśvac-chāntiṁ nigacchati |\nkaunteya pratijānīhi na me bhaktaḥ praṇaśyati ||',
+          english: 'Quickly one becomes righteous and attains lasting peace. O son of Kunti, declare it boldly: My devotee shall never perish!',
+          hindi: 'वह शीघ्र ही धर्मात्मा हो जाता है और परम शांति को प्राप्त होता है। हे कौन्तेय! तुम निडर होकर प्रतिज्ञा करो कि मेरे भक्त का कभी नाश नहीं होता।',
+          practical: 'Stand confident in your integrity. No slander, circumstance, or obstacle has the power to destroy an honest and devoted soul.'
+        },
+        {
+          id: 'protection-4',
+          emotion: 'protection',
+          ref: 'BG 4.8',
+          sanskrit: 'परित्राणाय साधूनां विनाशाय च दुष्कृताम्।\nधर्मसंस्थापनार्थाय सम्भवामि युगे युगे॥',
+          translit: 'paritrāṇāya sādhūnāṁ vināśāya ca duṣkṛtām |\ndharma-saṁsthāpanārthāya sambhavāmi yuge yuge ||',
+          english: 'For the protection of the good, the destruction of evil tendencies, and the re-establishment of righteousness, I manifest age after age.',
+          hindi: 'सज्जनों की रक्षा के लिए, दुष्ट कर्म करने वालों के विनाश के लिए और धर्म की सुदृढ़ स्थापना के लिए मैं युग-युग में प्रकट होता हूँ।',
+          practical: 'Justice and truth always prevail in the larger tapestry of life. Hold on to virtue; divine order is working quietly on your behalf.'
+        }
+      ],
+
+      anger: [
+        {
+          id: 'anger-1',
+          emotion: 'anger',
+          ref: 'BG 2.63',
+          sanskrit: 'क्रोधाद्भवति सम्मोहः सम्मोहात्स्मृतिविभ्रमः।\nस्मृतिभ्रंशाद् बुद्धिनाशो बुद्धिनाशात्प्रणश्यति॥',
+          translit: 'krodhād bhavati sammohaḥ sammohāt smṛti-vibhramaḥ |\nsmṛti-bhraṁśād buddhi-nāśo buddhi-nāśāt praṇaśyati ||',
+          english: 'From anger arises confusion; from confusion comes loss of memory; with loss of memory the intellect is ruined; and when intellect is ruined, a person falls into ruin.',
+          hindi: 'क्रोध से बुद्धि में मोह (अविवेक) उत्पन्न होता है, मोह से स्मृति भ्रष्ट होती है, स्मृति भ्रष्ट होने से बुद्धि का नाश होता है और बुद्धि नष्ट होने पर मनुष्य का पतन हो जाता है।',
+          practical: 'Before responding while angry, pause for three breaths. Anger blinds intellect, causing you to burn bridges you spent years constructing.'
+        },
+        {
+          id: 'anger-2',
+          emotion: 'anger',
+          ref: 'BG 2.62',
+          sanskrit: 'ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते।\nसङ्गात्सञ्जायते कामः कामात्क्रोधोऽभिजायते॥',
+          translit: 'dhyāyato viṣayān puṁsaḥ saṅgas teṣūpajāyate |\nsaṅgāt sañjāyate kāmaḥ kāmāt krodho \'bhijāyate ||',
+          english: 'While dwelling on sensory objects, attachment develops; from attachment springs intense desire, and when desire is thwarted, anger is born.',
+          hindi: 'विषयों का निरंतर चिंतन करने से उनमें आसक्ति पैदा होती है। आसक्ति से कामना (इच्छा) उत्पन्न होती है, और जब कामना पूरी नहीं होती तो क्रोध जन्म लेता है।',
+          practical: 'Your anger is simply an unfulfilled expectation screaming for attention. Trace what desire was blocked, and release the urge to control what cannot be dictated.'
+        },
+        {
+          id: 'anger-3',
+          emotion: 'anger',
+          ref: 'BG 16.21',
+          sanskrit: 'त्रिविधं नरकस्येदं द्वारं नाशनमात्मनः।\nकामः क्रोधस्तथा लोभस्तस्मादेतत्त्रयं त्यजेत्॥',
+          translit: 'tri-vidhaṁ narakasyedaṁ dvāraṁ nāśanam ātmanaḥ |\nkāmaḥ krodhas tathā lobhas tasmād etat trayaṁ tyajet ||',
+          english: 'There are three gates leading to the degradation of the self: lust, anger, and greed. Therefore, one must consciously abandon all three.',
+          hindi: 'काम, क्रोध तथा लोभ—ये आत्मा का नाश करने वाले नरक के तीन द्वार हैं। अतः इन तीनों का पूरी तरह त्याग कर देना चाहिए।',
+          practical: 'Recognize anger as self-inflicted poison. Holding onto resentment is drinking venom and hoping the other person gets hurt. Choose self-preservation.'
+        },
+        {
+          id: 'anger-4',
+          emotion: 'anger',
+          ref: 'BG 5.23',
+          sanskrit: 'शक्नोतीहैव यः सोढुं प्राक् शरीरविमोक्षणात्।\nकामक्रोधोद्भवं वेगं स युक्तः स सुखी नरः॥',
+          translit: 'śaknotīhaiva yaḥ soḍhuṁ prāk śarīra-vimokṣaṇāt |\nkāma-krodhodbhavaṁ vegaṁ sa yuktaḥ sa sukhī naraḥ ||',
+          english: 'One who is able to withstand the relentless force of desire and anger before shedding this body is truly united in yoga and is a happy person.',
+          hindi: 'जो मनुष्य इस शरीर को छोड़ने से पहले ही काम और क्रोध से उत्पन्न होने वाले वेग को सहन करने में समर्थ हो जाता है, वही योगी और वास्तव में सुखी है।',
+          practical: 'Mastery is not suppressing anger, but letting its fiery surge pass through without dictating your speech or actions.'
+        }
+      ],
+
+      peace: [
+        {
+          id: 'peace-1',
+          emotion: 'peace',
+          ref: 'BG 2.70',
+          sanskrit: 'आपूर्यमाणमचलप्रतिष्ठं समुद्रमापः प्रविशन्ति यद्वत्।\nतद्वत्कामा यं प्रविशन्ति सर्वे स शान्तिमाप्नोति न कामकामी॥',
+          translit: 'āpūryamāṇam acala-pratiṣṭhaṁ samudram āpaḥ praviśanti yadvat |\ntadvat kāmā yaṁ praviśanti sarve sa śāntim āpnoti na kāma-kāmī ||',
+          english: 'As the vast ocean remains still and undisturbed though countless rivers flow into it, so one into whom all desires merge without causing disturbance attains peace.',
+          hindi: 'जैसे निरंतर नदियों के जल से भरने पर भी समुद्र अपनी मर्यादा में अडिग रहता है, वैसे ही जिस व्यक्ति में सभी कामनाएं बिना हलचल किए समा जाती हैं, वही परम शांति को प्राप्त करता है।',
+          practical: 'Be like the deep ocean. Let the small waves of praise, criticism, and trivial drama dissolve into your boundless inner sanctuary.'
+        },
+        {
+          id: 'peace-2',
+          emotion: 'peace',
+          ref: 'BG 2.71',
+          sanskrit: 'विहाय कामान्यः सर्वान्पुमांश्चरति निःस्पृहः।\nनिर्ममो निरहङ्कारः स शान्तिमधिगच्छति॥',
+          translit: 'vihāya kāmān yaḥ sarvān pumāṁś carati niḥspṛhaḥ |\nnirmamo nirahaṅkāraḥ sa śāntim adhigacchati ||',
+          english: 'That person attains true peace who abandons all selfish desires and moves through life free from possessiveness, greed, and egoism.',
+          hindi: 'जो व्यक्ति सभी कामनाओं को त्यागकर ममतारहित, अहंकाररहित और तृष्णारहित होकर विचरण करता है, वही सच्ची शांति पाता है।',
+          practical: 'Drop the heavy backpack of "me" and "mine." Lightness of spirit arrives the moment you stop defending your fragile ego.'
+        },
+        {
+          id: 'peace-3',
+          emotion: 'peace',
+          ref: 'BG 5.29',
+          sanskrit: 'भोक्तारं यज्ञतपसां सर्वलोकमहेश्वरम्।\nसुहृदं सर्वभूतानां ज्ञात्वा मां शान्तिमृच्छति॥',
+          translit: 'bhoktāraṁ yajña-tapasāṁ sarva-loka-maheśvaram |\nsuhṛdaṁ sarva-bhūtānāṁ jñātvā māṁ śāntim ṛcchati ||',
+          english: 'Knowing Me as the ultimate beneficiary of all sacrifice and penance, the supreme master of all realms, and the devoted friend of all beings, one attains peace.',
+          hindi: 'मुझे समस्त यज्ञों और तपस्याओं का भोक्ता, संपूर्ण लोकों का स्वामी और सब प्राणियों का निःस्वार्थ हितैषी (मित्र) जानकर मनुष्य शांति प्राप्त करता है।',
+          practical: 'Rest in the assurance that the universe is governed by benevolent intelligence. You are supported; soften and breathe.'
+        },
+        {
+          id: 'peace-4',
+          emotion: 'peace',
+          ref: 'BG 12.15',
+          sanskrit: 'यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः।\nहर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः॥',
+          translit: 'yasmān nodvijate loko lokān nodvijate ca yaḥ |\nharṣāmarṣa-bhayodvegair mukto yaḥ sa ca me priyaḥ ||',
+          english: 'He by whom no one is agitated and who is never agitated by others, who is freed from excessive excitement, intolerance, fear and anxiety, is dear to Me.',
+          hindi: 'जिससे किसी को कष्ट या उद्वेग नहीं होता और जो स्वयं किसी से उद्विग्न नहीं होता, तथा जो हर्ष, ईर्ष्या, भय और चिंता से मुक्त है, वह मुझे अत्यंत प्रिय है।',
+          practical: 'Become a sanctuary for others today. Vow not to disturb anyone\'s peace, and refuse to let anyone rob you of yours.'
+        }
+      ],
+
+      loneliness: [
+        {
+          id: 'loneliness-1',
+          emotion: 'loneliness',
+          ref: 'BG 18.61',
+          sanskrit: 'ईश्वरः सर्वभूतानां हृद्देशेऽर्जुन तिष्ठति।\nभ्रामयन्सर्वभूतानि यन्त्रारूढानि मायया॥',
+          translit: 'īśvaraḥ sarva-bhūtānāṁ hṛd-deśe \'rjuna tiṣṭhati |\nbhrāmayan sarva-bhūtāni yantrārūḍhāni māyayā ||',
+          english: 'The Supreme Lord abides in the heart region of all living beings, O Arjuna, gently guiding their journey through this world.',
+          hindi: 'हे अर्जुन! ईश्वर सभी प्राणियों के हृदय में निवास करता है और अपनी माया से सभी जीवों को उनके कर्मों के अनुरूप गतिमान रखता है।',
+          practical: 'You are never truly alone. The Divine is closer to you than your own heartbeat. Turn your gaze inward and communicate with that quiet presence.'
+        },
+        {
+          id: 'loneliness-2',
+          emotion: 'loneliness',
+          ref: 'BG 6.30',
+          sanskrit: 'यो मां पश्यति सर्वत्र सर्वं च मयि पश्यति।\nतस्याहं न प्रणश्यामि स च मे न प्रणश्यति॥',
+          translit: 'yo māṁ paśyati sarvatra sarvaṁ ca mayi paśyati |\ntasyāhaṁ na praṇaśyāmi sa ca me na praṇaśyati ||',
+          english: 'For one who sees Me in all things and sees all things in Me, I am never lost to them, nor are they ever lost to Me.',
+          hindi: 'जो मुझे सबमें देखता है और सबको मुझमें देखता है, उसके लिए मैं कभी अदृश्य नहीं होता और न वह मेरे लिए कभी अदृश्य होता है।',
+          practical: 'When you feel isolated, look at nature, the sky, or people passing by. Recognize the single thread of consciousness connecting you to everything.'
+        },
+        {
+          id: 'loneliness-3',
+          emotion: 'loneliness',
+          ref: 'BG 9.18',
+          sanskrit: 'गतिर्भर्ता प्रभुः साक्षी निवासः शरणं सुहृत्।\nप्रभवः प्रलयः स्थानं निधानं बीजमव्ययम्॥',
+          translit: 'gatir bhartā prabhuḥ sākṣī nivāsaḥ śaraṇaṁ suhṛt |\nprabhavaḥ pralayaḥ sthānaṁ nidhānaṁ bījam avyayam ||',
+          english: 'I am the ultimate goal, the sustainer, the sovereign, the witness, the abode, the sanctuary, and the dearest friend of all.',
+          hindi: 'मैं ही परम गति, पालनकर्ता, स्वामी, साक्षी, विश्राम स्थल, शरण और सबका परम हितैषी मित्र हूँ। मैं ही उत्पत्ति, प्रलय और अविनाशी बीज हूँ।',
+          practical: 'Worldly companions may come and go, but Krishna calls Himself your "Suhṛt"—the unselfish, unconditional friend who never departs.'
+        },
+        {
+          id: 'loneliness-4',
+          emotion: 'loneliness',
+          ref: 'BG 10.20',
+          sanskrit: 'अहमात्मा गुडाकेश सर्वभूताशयस्थितः।\nअहमादिश्च मध्यं च भूतानामन्त एव च॥',
+          translit: 'aham ātmā guḍākeśa sarva-bhūtāśaya-sthitaḥ |\naham ādiś ca madhyaṁ ca bhūtānām anta eva ca ||',
+          english: 'I am the Self, O Guḍākeśa, seated in the hearts of all created beings. I am the beginning, the middle, and the end of all existence.',
+          hindi: 'हे अर्जुन! मैं समस्त जीवों के हृदयों में स्थित उनकी आत्मा हूँ। मैं ही सब प्राणियों का आदि, मध्य और अंत भी हूँ।',
+          practical: 'Aloneness is not loneliness; it is a sacred invitation into solitude. In solitude, you meet your true self and the divine within.'
+        }
+      ],
+
+      anxious: [
+        {
+          id: 'anxious-1',
+          emotion: 'anxious',
+          ref: 'BG 2.47',
+          sanskrit: 'कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥',
+          translit: 'karmaṇy evādhikāras te mā phaleṣu kadācana |\nmā karma-phala-hetur bhūr mā te saṅgo \'stv akarmaṇi ||',
+          english: 'You have a right only to perform your duty, never to its fruits. Let not the fruit of action be your motive, nor be attached to inaction.',
+          hindi: 'तुम्हारा अधिकार केवल कर्म करने में है, उसके फलों में कभी नहीं। इसलिए कर्म के फल की चिंता मत करो और न ही कर्म त्यागने का विचार करो।',
+          practical: 'Anxiety lives exclusively in imaginary futures. Bring your attention back to the single task before you now. Do your duty with care, and let God manage the results.'
+        },
+        {
+          id: 'anxious-2',
+          emotion: 'anxious',
+          ref: 'BG 2.48',
+          sanskrit: 'योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।\nसिद्ध्यसिद्ध्योः समो भूत्वा समत्वं योग उच्यते॥',
+          translit: 'yoga-sthaḥ kuru karmāṇi saṅgaṁ tyaktvā dhanañjaya |\nsiddhy-asiddhyoḥ samo bhūtvā samatvaṁ yoga ucyate ||',
+          english: 'Perform your duties poised in yoga, abandoning clinging attachment. Remain balanced in both success and defeat; equanimity of mind is true yoga.',
+          hindi: 'हे धनंजय! आसक्ति का त्याग कर सफलता और विफलता में समान रहते हुए योग में स्थित होकर कर्म करो। यह समभाव ही योग कहलाता है।',
+          practical: 'Redefine success: it is not winning every battle, but preserving your balance and composure through life\'s storms.'
+        },
+        {
+          id: 'anxious-3',
+          emotion: 'anxious',
+          ref: 'BG 6.26',
+          sanskrit: 'यतो यतो निश्चरति मनश्चञ्चलमस्थिरम्।\nततस्ततो नियम्यैतदात्मन्येव वशं नयेत्॥',
+          translit: 'yato yato niścarati manaś cañcalam asthiram |\ntatas tato niyamyaitad ātmany eva vaśaṁ nayet ||',
+          english: 'From wherever the wandering and restless mind strays, gently withdraw it from that distraction and guide it back under the custody of the Self.',
+          hindi: 'यह चंचल और अस्थिर मन जिस-जिस विषय की ओर भागे, वहाँ-वहाँ से इसे रोककर बार-बार आत्मा के ही वश में लाना चाहिए।',
+          practical: 'Do not punish your mind for racing. Notice the panic, gently whisper "return," and anchor back to the rhythm of your breath.'
+        },
+        {
+          id: 'anxious-4',
+          emotion: 'anxious',
+          ref: 'BG 18.58',
+          sanskrit: 'मच्चित्तः सर्वदुर्गाणि मत्प्रसादात्तरिष्यसि।\nअथ चेत्त्वमहङ्कारान्न श्रोष्यसि विनङ्क्ष्यसि॥',
+          translit: 'mac-cittaḥ sarva-durgāṇi mat-prasādāt tariṣyasi |\natha cet tvam ahaṅkārān na śroṣyasi vinaṅkṣyasi ||',
+          english: 'Fixing your consciousness upon Me, by My divine grace you shall cross over all insurmountable obstacles and hardships.',
+          hindi: 'यदि तुम अपना चित्त मुझमें लगाओगे, तो मेरी कृपा से समस्त दुर्गम संकटों को पार कर जाओगे।',
+          practical: 'When challenges seem too colossal for your strength, remind yourself that you do not need to solve everything alone. Lean on grace.'
+        }
+      ]
+    };
+
+    // Color definitions matching the image palette
+    const EMOTION_CONFIG = {
+      happy: { name: 'Happy', color: '#388e3c', textClass: 'text-emerald-700', bgClass: 'bg-emerald-600' },
+      sad: { name: 'Sad', color: '#5b9bd5', textClass: 'text-sky-700', bgClass: 'bg-sky-500' },
+      laziness: { name: 'Laziness', color: '#d4a017', textClass: 'text-yellow-700', bgClass: 'bg-yellow-500' },
+      protection: { name: 'Protection', color: '#d9822b', textClass: 'text-amber-700', bgClass: 'bg-amber-600' },
+      anger: { name: 'Anger', color: '#c62828', textClass: 'text-red-700', bgClass: 'bg-red-600' },
+      peace: { name: 'Peace', color: '#e88ba5', textClass: 'text-pink-700', bgClass: 'bg-pink-400' },
+      loneliness: { name: 'Loneliness', color: '#7e57c2', textClass: 'text-purple-700', bgClass: 'bg-purple-600' },
+      anxious: { name: 'Anxious', color: '#795548', textClass: 'text-stone-700', bgClass: 'bg-stone-600' }
+    };
+
+    // Global State
+    let currentShlok = null;
+    let currentEmotionKey = 'anxious';
+    let soundEnabled = true;
+    let audioCtx = null;
+    let bookmarks = [];
+
+    // Initialize Bookmarks from localStorage
+    try {
+      const stored = localStorage.getItem('krishna_path_saved');
+      if (stored) bookmarks = JSON.parse(stored);
+    } catch(e) {
+      bookmarks = [];
+    }
+
+    // Initialize Web Audio API for Pure Meditative Bell Synthesis
+    function initAudio() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+    }
+
+    // Synthesize Bell / Singing Bowl Chime
+    function playChime(frequency = 528, duration = 2.4) {
+      if (!soundEnabled) return;
+      try {
+        initAudio();
+        const now = audioCtx.currentTime;
+
+        // Master gain
+        const masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.28, now);
+        masterGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+        masterGain.connect(audioCtx.destination);
+
+        // Harmonics for rich Tibetan / Temple singing bell
+        const harmonics = [1, 1.5, 2.02, 2.76];
+        const weights = [0.6, 0.25, 0.1, 0.05];
+
+        harmonics.forEach((h, i) => {
+          const osc = audioCtx.createOscillator();
+          const oscGain = audioCtx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(frequency * h, now);
+
+          oscGain.gain.setValueAtTime(weights[i], now);
+          oscGain.gain.exponentialRampToValueAtTime(0.001, now + (duration * (0.8 - i * 0.15)));
+
+          osc.connect(oscGain);
+          oscGain.connect(masterGain);
+
+          osc.start(now);
+          osc.stop(now + duration);
+        });
+      } catch (err) {
+        console.error("Audio error", err);
+      }
+    }
+
+    // Render 3D Rolled Slips inside the Glass Jar
+    function populateJarSlips() {
+      const topContainer = document.getElementById('slipsContainerTop');
+      const bottomContainer = document.getElementById('slipsContainerBottom');
+      topContainer.innerHTML = '';
+      bottomContainer.innerHTML = '';
+
+      const emotions = Object.keys(EMOTION_CONFIG);
+      // Generate two rows of slips like the original photo
+      for (let i = 0; i < 24; i++) {
+        const emotionKey = emotions[i % emotions.length];
+        const config = EMOTION_CONFIG[emotionKey];
+        
+        // Random slight height variation for handmade scroll illusion
+        const heightPercent = 75 + Math.sin(i * 1.5) * 20;
+
+        const slipTop = document.createElement('div');
+        slipTop.className = 'rolled-slip';
+        slipTop.style.backgroundColor = config.color;
+        slipTop.style.height = `${heightPercent}%`;
+        slipTop.title = `${config.name} Slip`;
+        slipTop.setAttribute('data-emotion', emotionKey);
+        slipTop.addEventListener('click', (e) => {
+          e.stopPropagation();
+          drawSlip(emotionKey);
+        });
+        topContainer.appendChild(slipTop);
+
+        const slipBottom = document.createElement('div');
+        slipBottom.className = 'rolled-slip';
+        slipBottom.style.backgroundColor = config.color;
+        slipBottom.style.height = `${80 + Math.cos(i * 1.2) * 15}%`;
+        slipBottom.title = `${config.name} Slip`;
+        slipBottom.setAttribute('data-emotion', emotionKey);
+        slipBottom.addEventListener('click', (e) => {
+          e.stopPropagation();
+          drawSlip(emotionKey);
+        });
+        bottomContainer.appendChild(slipBottom);
+      }
+    }
+
+    // Draw a slip by Emotion
+    function drawSlip(emotionKey) {
+      initAudio();
+      currentEmotionKey = emotionKey;
+      const list = GITA_WISDOM_DB[emotionKey] || GITA_WISDOM_DB['anxious'];
+      // Random pick or avoid repeat
+      let pick = list[Math.floor(Math.random() * list.length)];
+      if (currentShlok && list.length > 1 && pick.id === currentShlok.id) {
+        const filtered = list.filter(item => item.id !== currentShlok.id);
+        pick = filtered[Math.floor(Math.random() * filtered.length)];
+      }
+
+      currentShlok = pick;
+      playChime(432, 2.5);
+      showScrollModal(pick);
+    }
+
+    // Open Scroll with Unfurl Animation
+    function showScrollModal(shlok) {
+      const modal = document.getElementById('scrollModal');
+      const card = document.getElementById('scrollCard');
+      const config = EMOTION_CONFIG[shlok.emotion] || EMOTION_CONFIG['anxious'];
+
+      // Populate Elements
+      document.getElementById('scrollEmotionName').innerText = `${config.name} Wisdom`;
+      document.getElementById('scrollColorBadge').style.backgroundColor = config.color;
+      document.getElementById('scrollVerseRef').innerText = shlok.ref;
+      document.getElementById('sanskritVerse').innerText = shlok.sanskrit;
+      document.getElementById('transliteration').innerText = shlok.translit;
+      document.getElementById('englishMeaning').innerText = shlok.english;
+      document.getElementById('hindiMeaning').innerText = shlok.hindi;
+      document.getElementById('practicalWisdom').innerText = shlok.practical;
+
+      updateBookmarkButtonState();
+
+      // Reset voice
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+      document.getElementById('speechBtnText').innerText = "Listen";
+
+      // Show modal
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        card.classList.add('scroll-unroll');
+      }, 10);
+    }
+
+    function closeScrollModal() {
+      const modal = document.getElementById('scrollModal');
+      const card = document.getElementById('scrollCard');
+      playChime(320, 1.2);
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+
+      modal.classList.add('opacity-0');
+      card.classList.remove('scroll-unroll');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Bookmarking Logic
+    function updateBookmarkCount() {
+      const badge = document.getElementById('savedCountBadge');
+      badge.innerText = bookmarks.length;
+      try {
+        localStorage.setItem('krishna_path_saved', JSON.stringify(bookmarks));
+      } catch(e) {}
+    }
+
+    function isCurrentBookmarked() {
+      if (!currentShlok) return false;
+      return bookmarks.some(b => b.id === currentShlok.id);
+    }
+
+    function updateBookmarkButtonState() {
+      const btnText = document.getElementById('bookmarkBtnText');
+      const icon = document.getElementById('bookmarkIcon');
+      if (isCurrentBookmarked()) {
+        btnText.innerText = "Saved";
+        icon.classList.add('text-amber-600', 'fill-current');
+      } else {
+        btnText.innerText = "Save Slip";
+        icon.classList.remove('text-amber-600', 'fill-current');
+      }
+    }
+
+    function toggleBookmark() {
+      if (!currentShlok) return;
+      if (isCurrentBookmarked()) {
+        bookmarks = bookmarks.filter(b => b.id !== currentShlok.id);
+        showToast("Slip removed from saved list");
+      } else {
+        bookmarks.push(currentShlok);
+        showToast("Slip saved to your sanctuary ✨");
+        playChime(640, 1.5);
+      }
+      updateBookmarkCount();
+      updateBookmarkButtonState();
+      renderSavedSlips();
+    }
+
+    function renderSavedSlips() {
+      const listContainer = document.getElementById('savedSlipsList');
+      listContainer.innerHTML = '';
+
+      if (bookmarks.length === 0) {
+        listContainer.innerHTML = `
+          <div class="text-center py-12 text-slate-500">
+            <svg class="w-10 h-10 mx-auto text-slate-600 mb-2 stroke-current" fill="none" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+            <p class="text-sm">No saved slips yet.</p>
+            <p class="text-xs text-slate-600 mt-1">Tap "Save Slip" on any shlok scroll to revisit it anytime.</p>
+          </div>
+        `;
+        return;
+      }
+
+      bookmarks.forEach((item) => {
+        const config = EMOTION_CONFIG[item.emotion] || EMOTION_CONFIG['anxious'];
+        const card = document.createElement('div');
+        card.className = 'bg-slate-800/70 border border-slate-700/80 rounded-xl p-3 hover:border-amber-500/50 transition-all cursor-pointer group';
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center space-x-2">
+              <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${config.color}"></span>
+              <span class="text-xs font-bold text-amber-200 font-cinzel">${item.ref}</span>
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 font-medium">(${config.name})</span>
+            </div>
+            <button class="delete-bookmark text-slate-500 hover:text-red-400 p-1" data-id="${item.id}" title="Remove">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+          <p class="text-xs text-slate-300 font-sanskrit line-clamp-1">${item.sanskrit.replace('\n', ' ')}</p>
+          <p class="text-[11px] text-slate-400 mt-1 line-clamp-2">${item.english}</p>
+        `;
+
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('.delete-bookmark')) return;
+          currentShlok = item;
+          currentEmotionKey = item.emotion;
+          document.getElementById('savedDrawer').classList.add('translate-x-full');
+          showScrollModal(item);
+        });
+
+        const delBtn = card.querySelector('.delete-bookmark');
+        delBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          bookmarks = bookmarks.filter(b => b.id !== item.id);
+          updateBookmarkCount();
+          updateBookmarkButtonState();
+          renderSavedSlips();
+          showToast("Slip removed");
+        });
+
+        listContainer.appendChild(card);
+      });
+    }
+
+    // Web Speech API Voice synthesis
+    function toggleVoiceReading() {
+      if (!('speechSynthesis' in window)) {
+        showToast("Speech synthesis not supported on this browser.");
+        return;
+      }
+
+      if (window.speechSynthesis.speaking) {
+        window.speechSynthesis.cancel();
+        document.getElementById('speechBtnText').innerText = "Listen";
+        return;
+      }
+
+      if (!currentShlok) return;
+
+      const utterance = new SpeechSynthesisUtterance(
+        `Bhagavad Gita ${currentShlok.ref}. ${currentShlok.english}. Practical insight: ${currentShlok.practical}`
+      );
+      utterance.rate = 0.9;
+      utterance.pitch = 0.95;
+
+      utterance.onstart = () => {
+        document.getElementById('speechBtnText').innerText = "Stop";
+      };
+      utterance.onend = () => {
+        document.getElementById('speechBtnText').innerText = "Listen";
+      };
+      utterance.onerror = () => {
+        document.getElementById('speechBtnText').innerText = "Listen";
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Clipboard Copy Helper using document.execCommand('copy')
+    function copyWisdom() {
+      if (!currentShlok) return;
+      const textToCopy = `🌸 Krishna Path | ${currentShlok.ref} 🌸\n\n` +
+        `॥ श्रीमद्भगवद्गीता ॥\n${currentShlok.sanskrit}\n\n` +
+        `English: ${currentShlok.english}\n\n` +
+        `Hindi: ${currentShlok.hindi}\n\n` +
+        `Mindful Practice: ${currentShlok.practical}\n\n` +
+        `Harmony in a Slip, Wisdom in a Shlok`;
+
+      const dummy = document.createElement("textarea");
+      document.body.appendChild(dummy);
+      dummy.value = textToCopy;
+      dummy.select();
+      try {
+        document.execCommand("copy");
+        showToast("Wisdom copied to clipboard! 📜");
+      } catch (err) {
+        showToast("Unable to copy text.");
+      }
+      document.body.removeChild(dummy);
+    }
+
+    // Toast Banner
+    let toastTimeout = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const text = document.getElementById('toastMessage');
+      text.innerText = msg;
+      toast.classList.remove('opacity-0');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('opacity-0');
+      }, 3200);
+    }
+
+    // 4-7-8 Breathing (Pranayama) Companion Logic
+    let breathInterval = null;
+    function startPranayama() {
+      const modal = document.getElementById('breatheModal');
+      modal.classList.remove('hidden');
+      setTimeout(() => modal.classList.remove('opacity-0'), 10);
+      playChime(396, 2);
+
+      let step = 0; // 0: inhale (4s), 1: hold (7s), 2: exhale (8s)
+      let count = 4;
+      const phaseLabel = document.getElementById('breathPhaseText');
+      const secondsLabel = document.getElementById('breathSeconds');
+
+      const updateUI = () => {
+        if (step === 0) {
+          phaseLabel.innerText = "Inhale Peace";
+          phaseLabel.className = "text-xl font-bold text-amber-300 font-cinzel";
+        } else if (step === 1) {
+          phaseLabel.innerText = "Hold Stillness";
+          phaseLabel.className = "text-xl font-bold text-emerald-300 font-cinzel";
+        } else {
+          phaseLabel.innerText = "Exhale Tension";
+          phaseLabel.className = "text-xl font-bold text-sky-300 font-cinzel";
+        }
+        secondsLabel.innerText = count;
+      };
+
+      updateUI();
+
+      if (breathInterval) clearInterval(breathInterval);
+      breathInterval = setInterval(() => {
+        count--;
+        if (count <= 0) {
+          if (step === 0) {
+            step = 1;
+            count = 7;
+            playChime(432, 1.2);
+          } else if (step === 1) {
+            step = 2;
+            count = 8;
+            playChime(324, 1.2);
+          } else {
+            step = 0;
+            count = 4;
+            playChime(528, 1.5);
+          }
+        }
+        updateUI();
+      }, 1000);
+    }
+
+    function stopPranayama() {
+      const modal = document.getElementById('breatheModal');
+      if (breathInterval) clearInterval(breathInterval);
+      modal.classList.add('opacity-0');
+      setTimeout(() => modal.classList.add('hidden'), 300);
+    }
+
+    // Ambient Diya Particle System
+    function initParticleCanvas() {
+      const canvas = document.getElementById('ambientCanvas');
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particles = [];
+      for (let i = 0; i < 45; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 2 + 0.5,
+          speedY: Math.random() * -0.4 - 0.1,
+          speedX: (Math.random() - 0.5) * 0.25,
+          alpha: Math.random() * 0.7 + 0.2,
+          pulse: Math.random() * 0.02 + 0.01
+        });
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+
+        particles.forEach(p => {
+          p.y += p.speedY;
+          p.x += p.speedX;
+          p.alpha += Math.sin(Date.now() * p.pulse) * 0.005;
+
+          if (p.y < 0) {
+            p.y = height + 10;
+            p.x = Math.random() * width;
+          }
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(223, 177, 91, ${Math.max(0.1, Math.min(0.8, p.alpha))})`;
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = '#f59e0b';
+          ctx.fill();
+        });
+
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    // Event Listeners
+    window.onload = function () {
+      populateJarSlips();
+      updateBookmarkCount();
+      renderSavedSlips();
+      initParticleCanvas();
+
+      // Jar Click: Draw random slip
+      document.getElementById('interactiveJar').addEventListener('click', () => {
+        const keys = Object.keys(EMOTION_CONFIG);
+        const randomKey = keys[Math.floor(Math.random() * keys.length)];
+        drawSlip(randomKey);
+      });
+
+      // Random Draw Button
+      document.getElementById('randomDrawBtn').addEventListener('click', () => {
+        const keys = Object.keys(EMOTION_CONFIG);
+        const randomKey = keys[Math.floor(Math.random() * keys.length)];
+        drawSlip(randomKey);
+      });
+
+      // Emotion Pill Buttons
+      document.querySelectorAll('.emotion-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const emotion = btn.getAttribute('data-emotion');
+          drawSlip(emotion);
+        });
+      });
+
+      // Modal Controls
+      document.getElementById('closeScrollBtn').addEventListener('click', closeScrollModal);
+      document.getElementById('returnJarBtn').addEventListener('click', closeScrollModal);
+      document.getElementById('drawAnotherBtn').addEventListener('click', () => {
+        drawSlip(currentEmotionKey);
+      });
+
+      document.getElementById('scrollModal').addEventListener('click', (e) => {
+        if (e.target.id === 'scrollModal') closeScrollModal();
+      });
+
+      // Action Toolbar
+      document.getElementById('bookmarkSlipBtn').addEventListener('click', toggleBookmark);
+      document.getElementById('copyVerseBtn').addEventListener('click', copyWisdom);
+      document.getElementById('speakVerseBtn').addEventListener('click', toggleVoiceReading);
+
+      // Sound Toggle
+      document.getElementById('soundToggleBtn').addEventListener('click', () => {
+        soundEnabled = !soundEnabled;
+        document.getElementById('soundIconOn').classList.toggle('hidden', !soundEnabled);
+        document.getElementById('soundIconOff').classList.toggle('hidden', soundEnabled);
+        if (soundEnabled) {
+          playChime(528, 1.2);
+          showToast("Temple Chimes Enabled 🔔");
+        } else {
+          showToast("Sound Muted 🔇");
+        }
+      });
+
+      // Pranayama / Breathing Tool
+      document.getElementById('breatheToggleBtn').addEventListener('click', startPranayama);
+      document.getElementById('closeBreatheBtn').addEventListener('click', stopPranayama);
+      document.getElementById('finishBreatheBtn').addEventListener('click', stopPranayama);
+
+      // Saved Slips Drawer
+      const savedDrawer = document.getElementById('savedDrawer');
+      document.getElementById('savedSlipsBtn').addEventListener('click', () => {
+        renderSavedSlips();
+        savedDrawer.classList.remove('translate-x-full');
+      });
+      document.getElementById('closeSavedDrawer').addEventListener('click', () => {
+        savedDrawer.classList.add('translate-x-full');
+      });
+    };
+  </script>
+</body>
+</html>
