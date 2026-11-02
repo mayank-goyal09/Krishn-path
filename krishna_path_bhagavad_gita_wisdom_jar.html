@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -39,6 +39,14 @@
             moodLust: '#991b1b',
             moodProcrastination: '#c25e00',
             moodOverthinking: '#2e3a8c',
+            moodEgo: '#6b21a8',
+            moodGrief: '#334155',
+            moodGuilt: '#475569',
+            moodRegret: '#3f3f46',
+            moodJealousy: '#0f766e',
+            moodComparison: '#0891b2',
+            moodRejection: '#c2410c',
+            moodNeglect: '#b45309',
           }
         }
       }
@@ -532,6 +540,78 @@
           <div>
             <div class="text-xs font-bold text-indigo-300">Overthinking</div>
             <div class="text-[10px] text-slate-400">Still Mind • BG 6.34-35</div>
+          </div>
+        </button>
+
+        <!-- Ego & Fragility -->
+        <button data-emotion="ego" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-purple-950 hover:border-purple-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodEgo shadow-md shadow-purple-950 group-hover:ring-2 ring-purple-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-purple-300">Ego & Fragility</div>
+            <div class="text-[10px] text-slate-400">Drop Pride • BG 3.27</div>
+          </div>
+        </button>
+
+        <!-- Grief & Loss -->
+        <button data-emotion="grief" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-slate-400/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodGrief shadow-md shadow-slate-900 group-hover:ring-2 ring-slate-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-slate-300">Grief & Loss</div>
+            <div class="text-[10px] text-slate-400">Eternal Spirit • BG 2.22</div>
+          </div>
+        </button>
+
+        <!-- Guilt -->
+        <button data-emotion="guilt" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-slate-400/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodGuilt shadow-md shadow-slate-900 group-hover:ring-2 ring-slate-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-slate-300">Guilt (ग्लानि)</div>
+            <div class="text-[10px] text-slate-400">Redemption • BG 9.30</div>
+          </div>
+        </button>
+
+        <!-- Regret -->
+        <button data-emotion="regret" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-zinc-700 hover:border-zinc-400/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodRegret shadow-md shadow-zinc-900 group-hover:ring-2 ring-zinc-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-zinc-300">Regret (पश्चाताप)</div>
+            <div class="text-[10px] text-slate-400">Forgive Past • BG 18.66</div>
+          </div>
+        </button>
+
+        <!-- Jealousy -->
+        <button data-emotion="jealousy" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-teal-950 hover:border-teal-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodJealousy shadow-md shadow-teal-950 group-hover:ring-2 ring-teal-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-teal-300">Jealousy (ईर्ष्या)</div>
+            <div class="text-[10px] text-slate-400">Goodwill • BG 12.13</div>
+          </div>
+        </button>
+
+        <!-- Comparison -->
+        <button data-emotion="comparison" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-cyan-950 hover:border-cyan-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodComparison shadow-md shadow-cyan-950 group-hover:ring-2 ring-cyan-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-cyan-300">Comparison</div>
+            <div class="text-[10px] text-slate-400">Your Own Path • BG 3.35</div>
+          </div>
+        </button>
+
+        <!-- Rejection -->
+        <button data-emotion="rejection" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-orange-950 hover:border-orange-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodRejection shadow-md shadow-orange-950 group-hover:ring-2 ring-orange-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-orange-300">Rejection</div>
+            <div class="text-[10px] text-slate-400">Always Welcomed • BG 9.29</div>
+          </div>
+        </button>
+
+        <!-- Neglect -->
+        <button data-emotion="neglect" class="emotion-btn group p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-amber-950 hover:border-amber-500/60 text-left transition-all hover:scale-[1.02] flex items-center space-x-3">
+          <div class="w-4 h-9 rounded-full bg-moodNeglect shadow-md shadow-amber-950 group-hover:ring-2 ring-amber-400 transition-all"></div>
+          <div>
+            <div class="text-xs font-bold text-amber-300">Neglect (उपेक्षा)</div>
+            <div class="text-[10px] text-slate-400">Unseen Friend • BG 9.18</div>
           </div>
         </button>
 
@@ -1171,6 +1251,190 @@
           hindi: 'जिसका मन संयमित नहीं है, उसके पास न स्थिर बुद्धि होती है और न ध्यान की भावना। अशांत मनुष्य को शांति कहाँ, और बिना शांति के सुख कहाँ?',
           practical: 'A restless mind destroys clarity. Close your eyes, pause the internal debate, and take refuge in Krishna\'s silence within your heart.'
         }
+      ],
+
+      ego: [
+        {
+          id: 'ego-1',
+          emotion: 'ego',
+          ref: 'BG 3.27',
+          sanskrit: 'प्रकृतेः क्रियमाणानि गुणैः कर्माणि सर्वशः।\nअहङ्कारविमूढात्मा कर्ताहमिति मन्यते॥',
+          translit: 'prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ |\nahaṅkāra-vimūḍhātmā kartāham iti manyate ||',
+          english: 'All activities are carried out by the energetic modes of cosmic nature. Bewildered by false ego, the deluded living entity imagines: "I am the doer."',
+          hindi: 'संपूर्ण कर्म प्रकृति के गुणों द्वारा किए जाते हैं। फिर भी अहंकार से मोहित अंतःकरण वाला अज्ञानी मनुष्य यह मानता है कि "मैं कर्ता हूँ।"',
+          practical: 'When feeling defensive or fragile after criticism, remind yourself: you are the instrument, not the supreme author. Dropping the heavy mantle of "I am the sole doer" instantly restores resilience.'
+        },
+        {
+          id: 'ego-2',
+          emotion: 'ego',
+          ref: 'BG 18.53',
+          sanskrit: 'अहङ्कारं बलं दर्पं कामं क्रोधं परिग्रहम्।\nविमुच्य निर्ममः शान्तो ब्रह्मभूयाय कल्पते॥',
+          translit: 'ahaṅkāraṁ balaṁ darpaṁ kāmaṁ krodhaṁ parigraham |\nvimucya nirmamaḥ śānto brahma-bhūyāya kalpate ||',
+          english: 'Free from egotism, false force, arrogance, craving, anger, and possessiveness, peaceful and without feeling "this is mine"—such a person is qualified for unity with the Supreme.',
+          hindi: 'जो अहंकार, बल, घमंड, काम, क्रोध और परिग्रह का त्याग कर, ममतारहित और शांत हो जाता है, वह परमानंद (ब्रह्म-भाव) को प्राप्त करने के योग्य बनता है।',
+          practical: 'Fragility occurs because the ego is thin and easily bruised. Step out of vanity into humbleness; what has no false pride can never be insulted.'
+        }
+      ],
+
+      grief: [
+        {
+          id: 'grief-1',
+          emotion: 'grief',
+          ref: 'BG 2.22',
+          sanskrit: 'वासांसि जीर्णानि यथा विहाय नवानि गृह्णाति नरोऽपराणि।\nतथा शरीराणि विहाय जीर्णान्यन्यानि संयाति नवानि देही॥',
+          translit: 'vāsāṁsi jīrṇāni yathā vihāya navāni gṛhṇāti naro \'parāṇi |\ntathā śarīrāṇi vihāya jīrṇāny anyāni saṁyāti navāni dehī ||',
+          english: 'Just as a person sheds worn-out garments and puts on new ones, the eternal consciousness sheds exhausted physical forms and moves into new existence.',
+          hindi: 'जैसे मनुष्य पुराने वस्त्रों को त्यागकर दूसरे नए वस्त्र धारण करता है, वैसे ही जीवात्मा पुराने शरीरों को छोड़कर नए शरीरों को प्राप्त होती है।',
+          practical: 'Honor your tears, but let them be tears of reverence rather than despair. The physical garment has dissolved, but the spirit you loved is indestructible and unharmed.'
+        },
+        {
+          id: 'grief-2',
+          emotion: 'grief',
+          ref: 'BG 2.25',
+          sanskrit: 'अव्यक्तोऽयमचिन्त्योऽयमविकार्योऽयमुच्यते।\nतस्मादेवं विदित्वैनं नानुशोचितुमर्हसि॥',
+          translit: 'avyakto \'yam acintyo \'yam avikāryo \'yam ucyate |\ntasmād evaṁ viditvainaṁ nānuśocitum arhasi ||',
+          english: 'The true soul is unmanifest, inconceivable, and immutable. Knowing this truth deeply, you ought not to grieve.',
+          hindi: 'यह आत्मा अव्यक्त, अचिंत्य और विकाररहित कही जाती है। इसलिए इसे इस प्रकार जानकर तुम्हें शोक नहीं करना चाहिए।',
+          practical: 'Grief softens when you realize death is not the end of a soul, but merely a chapter turn in an infinite story. Send loving prayers instead of heavy grief.'
+        }
+      ],
+
+      guilt: [
+        {
+          id: 'guilt-1',
+          emotion: 'guilt',
+          ref: 'BG 9.30',
+          sanskrit: 'अपि चेत्सुदुराचारो भजते मामनन्यभाक्।\nसाधुरेव स मन्तव्यः सम्यग्व्यवसितो हि सः॥',
+          translit: 'api cet su-durācāro bhajate mām ananya-bhāk |\nsādhur eva sa mantavyaḥ samyag vyavasito hi saḥ ||',
+          english: 'Even if the most fallen wrongdoer turns with undivided intent toward righteousness, they must be regarded as saintly, for their resolution is true and pure.',
+          hindi: 'यदि कोई अत्यंत दुराचारी भी अनन्य भाव से मुझे भजता है और सत्य मार्ग पर लौट आता है, तो उसे साधु ही मानना चाहिए, क्योंकि उसने सही संकल्प कर लिया है।',
+          practical: 'Guilt traps you in the mistakes of yesterday; repentance liberates your tomorrow. Krishna does not disqualify you for your past errors—make the righteous resolve right now and forgive yourself.'
+        },
+        {
+          id: 'guilt-2',
+          emotion: 'guilt',
+          ref: 'BG 4.36',
+          sanskrit: 'अपि चेदसि पापेभ्यः सर्वेभ्यः पापकृत्तमः।\nसर्वं ज्ञानप्लवेनैव वृजिनं सन्तरिष्यसि॥',
+          translit: 'api ced asi pāpebhyaḥ sarvebhyaḥ pāpa-kṛt-tamaḥ |\nsarvaṁ jñāna-plavenaiva vṛjinaṁ santariṣyasi ||',
+          english: 'Even if you were the foremost among all wrongdoers, by the raft of spiritual wisdom alone you shall cross over all oceans of misery and transgression.',
+          hindi: 'यदि तुम सब पापियों से भी बढ़कर पाप करने वाले हो, तो भी ज्ञान रूपी नौका द्वारा तुम समस्त पाप-सागर को सहज ही पार कर जाओगे।',
+          practical: 'Stop self-condemnation. Wisdom dissolves past darkness just as sunrise dissolves the night. Learn the lesson, make amends if possible, and step forward unburdened.'
+        }
+      ],
+
+      regret: [
+        {
+          id: 'regret-1',
+          emotion: 'regret',
+          ref: 'BG 6.40',
+          sanskrit: 'पार्थ नैवेह नामुत्र विनाशस्तस्य विद्यते।\nन हि कल्याणकृत्कश्चिद्दुर्गतिं तात गच्छति॥',
+          translit: 'pārtha naiveha nāmutra vināśas tasya vidyate |\nna hi kalyāṇa-kṛt kaścid durgatiṁ tāta gacchati ||',
+          english: 'O Partha! Neither in this world nor in the next is there any destruction for one who strives for goodness. One who walks the righteous path never meets with ruin.',
+          hindi: 'हे पार्थ! उस मनुष्य का न तो इस लोक में और न ही परलोक में विनाश होता है। क्योंकि कल्याणकारी कार्य करने वाला कोई भी व्यक्ति कभी दुर्गति को प्राप्त नहीं होता।',
+          practical: 'Do not grieve over "wasted years" or missed opportunities. Every stumbling block was teaching your soul what it needed to mature. No good intention was ever lost.'
+        },
+        {
+          id: 'regret-2',
+          emotion: 'regret',
+          ref: 'BG 18.66',
+          sanskrit: 'सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।\nअहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥',
+          translit: 'sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja |\nahaṁ tvāṁ sarva-pāpebhyo mokṣayiṣyāmi mā śucaḥ ||',
+          english: 'Relinquish all remorse and anxieties; take refuge in Me alone. I shall liberate you from the binding reactions of all past errors. Grieve no more.',
+          hindi: 'समस्त चिंताओं और पछतावे को छोड़कर केवल मेरी शरण में आ जाओ। मैं तुम्हें सभी पूर्व दोषों और बंधनों से मुक्त कर दूँगा; शोक मत करो।',
+          practical: 'Regret is a mental phantom holding you hostage to a timeline that cannot be altered. Hand your past to Krishna and live fully in this breath.'
+        }
+      ],
+
+      jealousy: [
+        {
+          id: 'jealousy-1',
+          emotion: 'jealousy',
+          ref: 'BG 12.13',
+          sanskrit: 'अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च।\nनिर्ममो निरहङ्कारः समदुःखसुखः क्षमी॥',
+          translit: 'adveṣṭā sarva-bhūtānāṁ maitraḥ karuṇa eva ca |\nnirmamo nirahaṅkāraḥ sama-duḥkha-sukhaḥ kṣamī ||',
+          english: 'One who harbors no ill-will toward any living being, who is friendly and compassionate, free from possessiveness and egotism, patient and forgiving, is dear to Me.',
+          hindi: 'जो किसी भी प्राणी से द्वेष नहीं करता, सबका मित्र और दयालु है, ममता और अहंकार से रहित, सुख-दुःख में सम और क्षमाशील है, वह मुझे अत्यंत प्रिय है।',
+          practical: 'Jealousy is the belief that someone else\'s abundance reduces yours. Bless their success silently. The universe has infinite abundance tailored for your unique destiny.'
+        },
+        {
+          id: 'jealousy-2',
+          emotion: 'jealousy',
+          ref: 'BG 18.71',
+          sanskrit: 'श्रद्धावाननसूयश्च शृणुयादपि यो नरः।\nसोऽपि मुक्तः शुभाँल्लोकान्प्राप्नुयात्पुण्यकर्मणाम्॥',
+          translit: 'śraddhāvān anasūyaś ca śṛṇuyād api yo naraḥ |\nso \'pi muktaḥ śubhāḻ lokān prāpnuyāt puṇya-karmaṇām ||',
+          english: 'A person who listens with pure faith and is free from the poison of envy (anasūya) attains liberation and reaches the luminous realms of the virtuous.',
+          hindi: 'जो मनुष्य श्रद्धावान होकर और ईर्ष्या-दोष से रहित (अनसूय) होकर इस ज्ञान को सुनता है, वह भी पापों से मुक्त होकर शुभ लोकों को प्राप्त होता है।',
+          practical: 'Purify your heart of malicious resentment. The moment you rejoice in others\' good fortune, your own spiritual channels open to receive blessings.'
+        }
+      ],
+
+      comparison: [
+        {
+          id: 'comparison-1',
+          emotion: 'comparison',
+          ref: 'BG 3.35',
+          sanskrit: 'श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वधर्मे निधनं श्रेयः परधर्मो भयावहः॥',
+          translit: 'śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt |\nsva-dharme nidhanaṁ śreyaḥ para-dharmo bhayāvahaḥ ||',
+          english: 'Far better is one\'s own natural path, even if seemingly imperfect, than another\'s path performed flawlessly. To walk another\'s path breeds danger and inner conflict.',
+          hindi: 'दूसरों के कर्तव्य को भली-भांति करने की अपेक्षा अपना स्वाभाविक कर्तव्य (स्वधर्म) चाहे त्रुटिपूर्ण भी हो, श्रेष्ठ है। दूसरों का मार्ग भय और अशांति देने वाला है।',
+          practical: 'Stop comparing your behind-the-scenes reality with someone else\'s highlight reel. You were born to play your unique instrument in the cosmic orchestra, not to imitate theirs.'
+        },
+        {
+          id: 'comparison-2',
+          emotion: 'comparison',
+          ref: 'BG 18.47',
+          sanskrit: 'श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात्।\nस्वभावनियतं कर्म कुर्वन्नाप्नोति किल्बिषम्॥',
+          translit: 'śreyān sva-dharmo viguṇaḥ para-dharmāt sv-anuṣṭhitāt |\nsva-bhāva-niyataṁ karma kurvan nāpnoti kilbiṣam ||',
+          english: 'Better is one\'s own intrinsic duty even with flaws than an alien duty well executed. One who carries out work according to their inherent nature incurs no fault.',
+          hindi: 'अपने स्वभाव के अनुकूल कर्तव्य का पालन करना परधर्म से कहीं अधिक श्रेष्ठ है। अपने स्वाभाविक कर्म को करने से मनुष्य कभी पतन को प्राप्त नहीं होता।',
+          practical: 'Your timeline is yours alone. Measure yourself only against who you were yesterday, never against the person next to you.'
+        }
+      ],
+
+      rejection: [
+        {
+          id: 'rejection-1',
+          emotion: 'rejection',
+          ref: 'BG 9.29',
+          sanskrit: 'समोऽहं सर्वभूतेषु न मे द्वेष्योऽस्ति न प्रियः।\nये भजन्ति तु मां भक्त्या मयि ते तेषु चाप्यहम्॥',
+          translit: 'samo \'haṁ sarva-bhūteṣu na me dveṣyo \'sti na priyaḥ |\nye bhajanti tu māṁ bhaktyā mayi te teṣu cāpy aham ||',
+          english: 'I view all living beings equally; no one is hateful to Me, nor is anyone an outcast. Those who turn toward Me with love reside in Me, and I ever reside in them.',
+          hindi: 'मैं सब प्राणियों में समभाव से व्यापक हूँ; न कोई मेरा अप्रिय है और न प्रिय। परंतु जो प्रेमपूर्वक मेरा स्मरण करते हैं, वे मुझमें हैं और मैं उनमें हूँ।',
+          practical: 'When the world turns you away, know that the Divine welcomes you with open arms. Human rejection is often divine redirection toward your true home.'
+        },
+        {
+          id: 'rejection-2',
+          emotion: 'rejection',
+          ref: 'BG 7.18',
+          sanskrit: 'उदाराः सर्व एवैते ज्ञानी त्वात्मैव मे मतम्।\nआस्थितः स हि युक्तात्मा मामेवानुत्तमां गतिम्॥',
+          translit: 'udārāḥ sarva evaite jñānī tv ātmaiva me matam |\nāsthitaḥ sa hi yuktātmā mām evānuttamāṁ gatim ||',
+          english: 'Noble indeed are all who seek Me, but the wise one who knows Me is regarded as My very soul. Established in devotion, they attain the supreme goal.',
+          hindi: 'मेरी शरण में आने वाले सभी पुण्यात्मा उदार हैं, किंतु जो ज्ञानी भाव से मुझे भजता है, वह तो मेरी अपनी आत्मा ही है।',
+          practical: 'Your worth is not determined by whether mortals accept you or decline you. You are loved unconditionally by the source of the cosmos itself.'
+        }
+      ],
+
+      neglect: [
+        {
+          id: 'neglect-1',
+          emotion: 'neglect',
+          ref: 'BG 9.18',
+          sanskrit: 'गतिर्भर्ता प्रभुः साक्षी निवासः शरणं सुहृत्।\nप्रभवः प्रलयः स्थानं निधानं बीजमव्ययम्॥',
+          translit: 'gatir bhartā prabhuḥ sākṣī nivāsaḥ śaraṇaṁ suhṛt |\nprabhavaḥ pralayaḥ sthānaṁ nidhānaṁ bījam avyayam ||',
+          english: 'I am the ultimate goal, the sustainer, the master, the eternal witness, the sanctuary, and the closest unconditional friend (Suhṛt) of all.',
+          hindi: 'मैं ही परम गति, भरण-पोषण करने वाला, स्वामी, साक्षी, विश्राम स्थल, शरण और सबका परम हितैषी निस्वार्थ मित्र हूँ।',
+          practical: 'When you feel unseen, forgotten, or neglected by loved ones, remember Krishna calls Himself your "Suhṛt"—the silent friend who never looks away and never leaves your side.'
+        },
+        {
+          id: 'neglect-2',
+          emotion: 'neglect',
+          ref: 'BG 6.9',
+          sanskrit: 'सुहृन्मित्रार्युदासीनमध्यस्थद्वेष्यबन्धुषु।\nसाधुष्वपि च पापेषु समबुद्धिर्विशिष्यते॥',
+          translit: 'suhṛn-mitrāry-udāsīna-madhyastha-dveṣya-bandhuṣu |\nsādhuṣv api ca pāpeṣu sama-buddhir viśiṣyate ||',
+          english: 'One who regards with equal vision the well-wisher, the friend, the foe, the indifferent neutral, the arbiter, the envious, and both the saint and the sinner, stands supreme.',
+          hindi: 'जो सुहृद, मित्र, शत्रु, उदासीन, मध्यस्थ, द्वेषी, बंधुजनों तथा धर्मात्माओं और पापियों में भी समान भाव रखता है, वह श्रेष्ठ माना जाता है।',
+          practical: 'Do not base your peace on whether people pay you attention or disregard you. Cultivate inner sovereignty; be rooted in yourself and you will never feel neglected.'
+        }
       ]
     };
 
@@ -1186,7 +1450,15 @@
       anxious: { name: 'Anxious', color: '#795548', textClass: 'text-stone-700', bgClass: 'bg-stone-600' },
       lust: { name: 'Lust (काम वासना)', color: '#991b1b', textClass: 'text-rose-700', bgClass: 'bg-rose-700' },
       procrastination: { name: 'Procrastination', color: '#c25e00', textClass: 'text-amber-700', bgClass: 'bg-amber-600' },
-      overthinking: { name: 'Overthinking', color: '#2e3a8c', textClass: 'text-indigo-700', bgClass: 'bg-indigo-600' }
+      overthinking: { name: 'Overthinking', color: '#2e3a8c', textClass: 'text-indigo-700', bgClass: 'bg-indigo-600' },
+      ego: { name: 'Ego & Fragility', color: '#6b21a8', textClass: 'text-purple-700', bgClass: 'bg-purple-700' },
+      grief: { name: 'Grief & Loss', color: '#334155', textClass: 'text-slate-700', bgClass: 'bg-slate-700' },
+      guilt: { name: 'Guilt (ग्लानि)', color: '#475569', textClass: 'text-slate-700', bgClass: 'bg-slate-600' },
+      regret: { name: 'Regret (पश्चाताप)', color: '#3f3f46', textClass: 'text-zinc-700', bgClass: 'bg-zinc-600' },
+      jealousy: { name: 'Jealousy (ईर्ष्या)', color: '#0f766e', textClass: 'text-teal-700', bgClass: 'bg-teal-600' },
+      comparison: { name: 'Comparison (तुलना)', color: '#0891b2', textClass: 'text-cyan-700', bgClass: 'bg-cyan-600' },
+      rejection: { name: 'Rejection', color: '#c2410c', textClass: 'text-orange-700', bgClass: 'bg-orange-600' },
+      neglect: { name: 'Neglect (उपेक्षा)', color: '#b45309', textClass: 'text-amber-700', bgClass: 'bg-amber-700' }
     };
 
     // Global State
