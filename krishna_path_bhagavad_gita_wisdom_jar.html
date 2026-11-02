@@ -169,6 +169,25 @@
     .shlok-border::before { top: -8px; left: 16px; }
     .shlok-border::after { bottom: -8px; right: 16px; }
 
+    /* 3D Interactive Jar Stage & Physics */
+    .jar-3d-stage {
+      perspective: 1200px;
+      perspective-origin: 50% 45%;
+    }
+    .jar-3d-wrapper {
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease-out;
+      will-change: transform;
+    }
+    .jar-3d-wrapper.jar-spring-back {
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .jar-shadow-3d {
+      transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+    }
+    .cursor-grab { cursor: grab; }
+    .cursor-grabbing { cursor: grabbing !important; }
+
     /* Particles Canvas */
     #ambientCanvas {
       position: fixed;
@@ -256,8 +275,11 @@
       </p>
     </div>
 
-    <!-- Center Stage: The Krishna Path Jar -->
-    <div class="relative w-full max-w-[360px] sm:max-w-[400px] flex flex-col items-center mt-2 mb-8 select-none">
+    <!-- Center Stage: The Krishna Path Jar (3D Interactive Rotating Vessel) -->
+    <div class="jar-3d-stage relative w-full max-w-[360px] sm:max-w-[410px] flex flex-col items-center mt-2 mb-8 select-none">
+      
+      <!-- 3D Transform Pivot Wrapper -->
+      <div id="jar3DWrapper" class="jar-3d-wrapper w-full flex flex-col items-center cursor-grab">
       
       <!-- Jar Top / Lid with Metal Rims -->
       <div class="jar-lid w-48 sm:w-56 h-7 rounded-t-xl relative z-20 flex items-center justify-center">
@@ -361,51 +383,83 @@
               Harmony in a Slip, Wisdom in a Shlok
             </p>
 
-            <!-- Mini Color Grid / Guide on the label (Just like the real product) -->
-            <div class="grid grid-cols-4 gap-x-1.5 gap-y-1 w-full mt-2 pt-1.5 border-t border-stone-300/80 text-[7.5px] sm:text-[8px] font-medium text-stone-700">
+            <!-- Mini Color Grid / Guide on the label (All 19 states) -->
+            <div class="grid grid-cols-4 sm:grid-cols-5 gap-x-1.5 gap-y-1 w-full mt-2 pt-1.5 border-t border-stone-300/80 text-[7px] sm:text-[7.5px] font-medium text-stone-700 leading-tight">
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodHappy mb-0.5"></span>
-                <span>Happy</span>
+                <span class="truncate w-full text-center">Happy</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodSad mb-0.5"></span>
-                <span>Sad</span>
+                <span class="truncate w-full text-center">Sad</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodLaziness mb-0.5"></span>
-                <span>Laziness</span>
+                <span class="truncate w-full text-center">Laziness</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodProtection mb-0.5"></span>
-                <span>Protection</span>
+                <span class="truncate w-full text-center">Protection</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodAnger mb-0.5"></span>
-                <span>Anger</span>
+                <span class="truncate w-full text-center">Anger</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodPeace mb-0.5"></span>
-                <span>Peace</span>
+                <span class="truncate w-full text-center">Peace</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodLoneliness mb-0.5"></span>
-                <span>Loneliness</span>
+                <span class="truncate w-full text-center">Loneliness</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodAnxious mb-0.5"></span>
-                <span>Anxious</span>
+                <span class="truncate w-full text-center">Anxious</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodLust mb-0.5"></span>
-                <span>Lust</span>
+                <span class="truncate w-full text-center">Lust</span>
               </div>
               <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodProcrastination mb-0.5"></span>
-                <span>Delay</span>
+                <span class="truncate w-full text-center">Delay</span>
               </div>
-              <div class="flex flex-col items-center col-span-2">
+              <div class="flex flex-col items-center">
                 <span class="w-full h-1.5 rounded-full bg-moodOverthinking mb-0.5"></span>
-                <span>Overthinking</span>
+                <span class="truncate w-full text-center">Overthink</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodEgo mb-0.5"></span>
+                <span class="truncate w-full text-center">Ego</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodGrief mb-0.5"></span>
+                <span class="truncate w-full text-center">Grief</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodGuilt mb-0.5"></span>
+                <span class="truncate w-full text-center">Guilt</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodRegret mb-0.5"></span>
+                <span class="truncate w-full text-center">Regret</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodJealousy mb-0.5"></span>
+                <span class="truncate w-full text-center">Jealousy</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodComparison mb-0.5"></span>
+                <span class="truncate w-full text-center">Compare</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <span class="w-full h-1.5 rounded-full bg-moodRejection mb-0.5"></span>
+                <span class="truncate w-full text-center">Rejection</span>
+              </div>
+              <div class="flex flex-col items-center col-span-2 sm:col-span-1">
+                <span class="w-full h-1.5 rounded-full bg-moodNeglect mb-0.5"></span>
+                <span class="truncate w-full text-center">Neglect</span>
               </div>
             </div>
 
@@ -419,10 +473,27 @@
 
       </div>
 
-      <!-- Jar Base Shadow & Tap Hint -->
-      <div class="w-3/4 h-5 bg-amber-400/10 blur-xl rounded-full mt-2"></div>
-      <p class="text-[11px] text-amber-300/60 mt-1 flex items-center space-x-1.5 tracking-wider">
-        <span>👆 Tap the jar or select an emotion below</span>
+      <!-- Close jar3DWrapper -->
+      </div>
+
+      <!-- 3D Reactive Shadow -->
+      <div id="jarShadow" class="jar-shadow-3d w-3/4 h-6 bg-amber-400/15 blur-xl rounded-full mt-1"></div>
+      
+      <!-- Interactive 3D Control Hints & Angle Meter -->
+      <div class="flex items-center space-x-3 mt-2 text-[11px] text-amber-300/70 tracking-wider">
+        <span class="flex items-center space-x-1">
+          <svg class="w-3.5 h-3.5 text-amber-400 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+          <span>Drag horizontally to rotate 3D jar</span>
+        </span>
+        <span class="text-amber-500/40">•</span>
+        <button id="resetJarRotationBtn" class="hover:text-amber-200 transition-colors underline decoration-dotted text-[10px]">
+          Reset Angle
+        </button>
+      </div>
+      <p class="text-[10.5px] text-slate-400 mt-1">
+        Tap any slip or the jar to receive Krishna's wisdom
       </p>
     </div>
 
@@ -1533,20 +1604,22 @@
       bottomContainer.innerHTML = '';
 
       const emotions = Object.keys(EMOTION_CONFIG);
-      // Generate two rows of slips like the original photo
-      for (let i = 0; i < 24; i++) {
+      // Double cycle across all 19 emotions (38 slips) so every state is physically present in the jar
+      const totalSlips = emotions.length * 2;
+      for (let i = 0; i < totalSlips; i++) {
         const emotionKey = emotions[i % emotions.length];
         const config = EMOTION_CONFIG[emotionKey];
-        
-        // Random slight height variation for handmade scroll illusion
-        const heightPercent = 75 + Math.sin(i * 1.5) * 20;
+
+        // Waveform variation mimicking real curled parchment
+        const heightPercent = 70 + Math.sin(i * 0.9) * 22;
 
         const slipTop = document.createElement('div');
-        slipTop.className = 'rolled-slip';
+        slipTop.className = 'rolled-slip flex-shrink-0';
         slipTop.style.backgroundColor = config.color;
         slipTop.style.height = `${heightPercent}%`;
-        slipTop.title = `${config.name} Slip`;
+        slipTop.title = `${config.name} Slip • BG Wisdom`;
         slipTop.setAttribute('data-emotion', emotionKey);
+        slipTop.setAttribute('data-slip-index', i);
         slipTop.addEventListener('click', (e) => {
           e.stopPropagation();
           drawSlip(emotionKey);
@@ -1554,11 +1627,12 @@
         topContainer.appendChild(slipTop);
 
         const slipBottom = document.createElement('div');
-        slipBottom.className = 'rolled-slip';
+        slipBottom.className = 'rolled-slip flex-shrink-0';
         slipBottom.style.backgroundColor = config.color;
-        slipBottom.style.height = `${80 + Math.cos(i * 1.2) * 15}%`;
-        slipBottom.title = `${config.name} Slip`;
+        slipBottom.style.height = `${75 + Math.cos(i * 0.8) * 18}%`;
+        slipBottom.title = `${config.name} Slip • BG Wisdom`;
         slipBottom.setAttribute('data-emotion', emotionKey);
+        slipBottom.setAttribute('data-slip-index', i);
         slipBottom.addEventListener('click', (e) => {
           e.stopPropagation();
           drawSlip(emotionKey);
@@ -1908,18 +1982,135 @@
     }
 
     // Event Listeners
+    // --- 3D Horizontal Jar Rotation & Physics System ---
+    let jarAngleY = 0;
+    let jarAngleX = 0;
+    let isDraggingJar = false;
+    let dragStartX = 0;
+    let dragStartY = 0;
+    let dragStartAngleY = 0;
+    let dragStartAngleX = 0;
+    let hasDragged = false;
+
+    function applyJar3DRotation(rotY, rotX, springBack = false) {
+      const wrapper = document.getElementById('jar3DWrapper');
+      const shadow = document.getElementById('jarShadow');
+      if (!wrapper) return;
+
+      if (springBack) {
+        wrapper.classList.add('jar-spring-back');
+      } else {
+        wrapper.classList.remove('jar-spring-back');
+      }
+
+      wrapper.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+
+      // Dynamic 3D lighting & shadow offset based on angle
+      if (shadow) {
+        const shadowOffset = (rotY / 35) * 16;
+        const shadowScale = 1 - Math.abs(rotY) / 140;
+        shadow.style.transform = `translateX(${shadowOffset}px) scaleX(${Math.max(0.7, shadowScale)})`;
+      }
+
+      // Parallax effect on slips inside the jar
+      const slipsTop = document.getElementById('slipsContainerTop');
+      const slipsBottom = document.getElementById('slipsContainerBottom');
+      const parallaxShift = (rotY / 35) * -12;
+      if (slipsTop) slipsTop.style.transform = `translateX(${parallaxShift}px)`;
+      if (slipsBottom) slipsBottom.style.transform = `translateX(${parallaxShift * 0.75}px)`;
+    }
+
+    function init3DJarInteractions() {
+      const wrapper = document.getElementById('jar3DWrapper');
+      const resetBtn = document.getElementById('resetJarRotationBtn');
+      if (!wrapper) return;
+
+      // Pointer Down (Mouse & Touch)
+      const onPointerDown = (e) => {
+        isDraggingJar = true;
+        hasDragged = false;
+        wrapper.classList.remove('jar-spring-back');
+        wrapper.classList.add('cursor-grabbing');
+
+        dragStartX = e.touches ? e.touches[0].clientX : e.clientX;
+        dragStartY = e.touches ? e.touches[0].clientY : e.clientY;
+        dragStartAngleY = jarAngleY;
+        dragStartAngleX = jarAngleX;
+      };
+
+      // Pointer Move
+      const onPointerMove = (e) => {
+        if (!isDraggingJar) return;
+        const currentX = e.touches ? e.touches[0].clientX : e.clientX;
+        const currentY = e.touches ? e.touches[0].clientY : e.clientY;
+        const deltaX = currentX - dragStartX;
+        const deltaY = currentY - dragStartY;
+
+        if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+          hasDragged = true;
+        }
+
+        // Horizontal rotation primarily; slight vertical pitch for natural depth
+        jarAngleY = Math.max(-42, Math.min(42, dragStartAngleY + deltaX * 0.38));
+        jarAngleX = Math.max(-10, Math.min(10, dragStartAngleX - deltaY * 0.12));
+
+        applyJar3DRotation(jarAngleY, jarAngleX, false);
+      };
+
+      // Pointer Up
+      const onPointerUp = () => {
+        if (!isDraggingJar) return;
+        isDraggingJar = false;
+        wrapper.classList.remove('cursor-grabbing');
+
+        // Smooth spring ease back towards front view (subtle 3D wobble)
+        jarAngleY = 0;
+        jarAngleX = 0;
+        applyJar3DRotation(0, 0, true);
+      };
+
+      wrapper.addEventListener('mousedown', onPointerDown);
+      window.addEventListener('mousemove', onPointerMove);
+      window.addEventListener('mouseup', onPointerUp);
+
+      wrapper.addEventListener('touchstart', onPointerDown, { passive: true });
+      window.addEventListener('touchmove', onPointerMove, { passive: true });
+      window.addEventListener('touchend', onPointerUp);
+
+      // Prevent dragging from drawing slip if moved
+      const interactiveJar = document.getElementById('interactiveJar');
+      if (interactiveJar) {
+        interactiveJar.addEventListener('click', (e) => {
+          if (hasDragged) {
+            e.stopPropagation();
+            hasDragged = false;
+            return;
+          }
+          const keys = Object.keys(EMOTION_CONFIG);
+          const randomKey = keys[Math.floor(Math.random() * keys.length)];
+          drawSlip(randomKey);
+        });
+      }
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          jarAngleY = 0;
+          jarAngleX = 0;
+          applyJar3DRotation(0, 0, true);
+        });
+      }
+    }
+
+    
     window.onload = function () {
       populateJarSlips();
       updateBookmarkCount();
       renderSavedSlips();
       initParticleCanvas();
 
-      // Jar Click: Draw random slip
-      document.getElementById('interactiveJar').addEventListener('click', () => {
-        const keys = Object.keys(EMOTION_CONFIG);
-        const randomKey = keys[Math.floor(Math.random() * keys.length)];
-        drawSlip(randomKey);
-      });
+      // Initialize 3D Rotating Vessel Physics
+      init3DJarInteractions();
 
       // Random Draw Button
       document.getElementById('randomDrawBtn').addEventListener('click', () => {
